@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41A336BD195B08A500284CE8 /* IKAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A336BC195B08A500284CE8 /* IKAbstractDocument.m */; };
+		41A336C3195B4B3400284CE8 /* IKDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A336C2195B4B3400284CE8 /* IKDocument.m */; };
+		41A336C6195B676500284CE8 /* IKRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 41A336C5195B676500284CE8 /* IKRepository.m */; };
 		41F8AE961959FEA700A2D38F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F8AE951959FEA700A2D38F /* Foundation.framework */; };
 		41F8AE981959FEA700A2D38F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F8AE971959FEA700A2D38F /* CoreGraphics.framework */; };
 		41F8AE9A1959FEA700A2D38F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F8AE991959FEA700A2D38F /* UIKit.framework */; };
@@ -34,6 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		41A336BB195B08A500284CE8 /* IKAbstractDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IKAbstractDocument.h; path = ../../../Classes/ios/IKAbstractDocument.h; sourceTree = "<group>"; };
+		41A336BC195B08A500284CE8 /* IKAbstractDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IKAbstractDocument.m; path = ../../../Classes/ios/IKAbstractDocument.m; sourceTree = "<group>"; };
+		41A336C1195B4B3400284CE8 /* IKDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKDocument.h; sourceTree = "<group>"; };
+		41A336C2195B4B3400284CE8 /* IKDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKDocument.m; sourceTree = "<group>"; };
+		41A336C4195B676500284CE8 /* IKRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKRepository.h; sourceTree = "<group>"; };
+		41A336C5195B676500284CE8 /* IKRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKRepository.m; sourceTree = "<group>"; };
 		41F8AE921959FEA700A2D38F /* IKJaymaSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41F8AE951959FEA700A2D38F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		41F8AE971959FEA700A2D38F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -79,6 +88,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41A336B7195B064F00284CE8 /* IKJayma */ = {
+			isa = PBXGroup;
+			children = (
+				41A336BB195B08A500284CE8 /* IKAbstractDocument.h */,
+				41A336BC195B08A500284CE8 /* IKAbstractDocument.m */,
+				41A336C4195B676500284CE8 /* IKRepository.h */,
+				41A336C5195B676500284CE8 /* IKRepository.m */,
+			);
+			name = IKJayma;
+			sourceTree = "<group>";
+		};
 		41F8AE891959FEA700A2D38F = {
 			isa = PBXGroup;
 			children = (
@@ -112,9 +132,12 @@
 		41F8AE9B1959FEA700A2D38F /* IKJaymaSampleApp */ = {
 			isa = PBXGroup;
 			children = (
+				41A336B7195B064F00284CE8 /* IKJayma */,
 				41F8AEA41959FEA700A2D38F /* IKAppDelegate.h */,
 				41F8AEA51959FEA700A2D38F /* IKAppDelegate.m */,
 				41F8AEA71959FEA700A2D38F /* Main.storyboard */,
+				41A336C1195B4B3400284CE8 /* IKDocument.h */,
+				41A336C2195B4B3400284CE8 /* IKDocument.m */,
 				41F8AEAA1959FEA700A2D38F /* IKViewController.h */,
 				41F8AEAB1959FEA700A2D38F /* IKViewController.m */,
 				41F8AEAD1959FEA700A2D38F /* Images.xcassets */,
@@ -251,8 +274,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				41F8AEA61959FEA700A2D38F /* IKAppDelegate.m in Sources */,
+				41A336C3195B4B3400284CE8 /* IKDocument.m in Sources */,
 				41F8AEA21959FEA700A2D38F /* main.m in Sources */,
+				41A336BD195B08A500284CE8 /* IKAbstractDocument.m in Sources */,
 				41F8AEAC1959FEA700A2D38F /* IKViewController.m in Sources */,
+				41A336C6195B676500284CE8 /* IKRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +487,7 @@
 				41F8AEC61959FEA700A2D38F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		41F8AEC71959FEA700A2D38F /* Build configuration list for PBXNativeTarget "IKJaymaSampleAppTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +496,7 @@
 				41F8AEC91959FEA700A2D38F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

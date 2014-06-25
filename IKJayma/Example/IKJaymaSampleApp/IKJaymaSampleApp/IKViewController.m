@@ -7,6 +7,7 @@
 //
 
 #import "IKViewController.h"
+#import "IKDocument.h"
 
 @interface IKViewController ()
 
@@ -17,7 +18,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSDictionary * fakeDictionary = @{@"firstName": @"andres",
+                                      @"midName": @"andres",
+                                      @"lastName": @"andres",
+                                      @"email": @"andres",
+                                      @"introduction": @"andres",
+                                      @"isActive": @true,
+                                      @"hasPoints": @true,
+                                      @"points": @20,
+                                      @"gamesPlayed": @4.2};
+    IKDocument * document = [[IKDocument alloc]initWithDictionary:fakeDictionary];
+    
+    NSDictionary * dict = [document dictionaryRepresentation];
+    
 }
 
 - (void)didReceiveMemoryWarning
