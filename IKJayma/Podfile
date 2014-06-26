@@ -1,0 +1,7 @@
+target :IKJayma do
+pod 'AFNetworking', '~> 2.0'
+end
+target :IKJaymaTests  do
+    pod 'Expecta', '~> 0.2.4'
+    pod 'OCMock', '~> 2.2'
+end
