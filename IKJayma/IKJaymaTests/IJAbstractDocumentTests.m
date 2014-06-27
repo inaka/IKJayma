@@ -6,7 +6,7 @@
 //
 
 // Class under test
-#import "IJAbstractDocument.h"
+#import "IJSampleDocument.h"
 
 // Collaborators
 
@@ -24,20 +24,34 @@
 @implementation IJAbstractDocumentTests
 {
     // test fixture ivars go here
+    IJSampleDocument * sut;
+    NSDictionary * dictionary;
+}
+- (void) setUp
+{
+    [super setUp];
+    dictionary = @{@"id":@"1" , @"name":@"sample"};
+    sut = [[IJSampleDocument alloc] initWithDictionary:dictionary];
 }
 
 - (void)test_initWithDictionaryShouldWork
 {
-    expect([[IJAbstractDocument alloc]initWithDictionary:@{}]).to.beKindOf([IJAbstractDocument class]);
+    expect(sut).to.beKindOf([IJAbstractDocument class]);
 }
-- (void)test_dictionaryRepresentationShouldReturnEmptyDictionary
+- (void)test_dictionaryRepresentationShouldReturnProperDictionary
 {
-    IJAbstractDocument * document = [[IJAbstractDocument alloc]initWithDictionary:@{}];
-    expect([document dictionaryRepresentation]).to.equal(@{});
+    expect([sut dictionaryRepresentation]).to.equal(dictionary);
 }
-- (void)test_idShouldBeEmpty
+- (void)test_idShouldBe1
 {
-    IJAbstractDocument * document = [[IJAbstractDocument alloc]initWithDictionary:@{}];
-    expect(document.documentId).to.equal(@"");
+    expect(sut.documentId).to.equal(@"1");
+}
+- (void)test_idShouldBeDictionaryId
+{
+    NSString * dictionaryId = [NSString stringWithFormat:@"%d",arc4random()%100];
+    NSDictionary * freshDictionary = @{@"id":dictionaryId};
+    IJSampleDocument * freshSut = [[IJSampleDocument alloc] initWithDictionary:freshDictionary];
+    
+    expect(freshSut.documentId).to.equal(dictionaryId);
 }
 @end

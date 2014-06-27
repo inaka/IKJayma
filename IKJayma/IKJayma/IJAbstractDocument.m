@@ -11,12 +11,13 @@
 @implementation IJAbstractDocument
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
-    self = [super init];
-    self.documentId = @"";
-    return self;
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return nil;
 }
+
 -(NSDictionary *)dictionaryRepresentation
 {
-    return @{};
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+    return nil;
 }
 @end
