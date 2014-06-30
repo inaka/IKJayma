@@ -14,7 +14,7 @@
 		4163F540195CA7DB001EDCFD /* libIKJayma.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4163F528195CA7DB001EDCFD /* libIKJayma.a */; };
 		4163F546195CA7DB001EDCFD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4163F544195CA7DB001EDCFD /* InfoPlist.strings */; };
 		4163F556195CA85B001EDCFD /* IJAbstractDocumentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F551195CA85B001EDCFD /* IJAbstractDocumentTests.m */; };
-		4163F557195CA85B001EDCFD /* IJAbstractRepoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F552195CA85B001EDCFD /* IJAbstractRepoTests.m */; };
+		4163F557195CA85B001EDCFD /* IJAbstractRepositoryTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F552195CA85B001EDCFD /* IJAbstractRepositoryTests.m */; };
 		4163F558195CA85B001EDCFD /* IJAFNetworkingBackendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F553195CA85B001EDCFD /* IJAFNetworkingBackendTests.m */; };
 		4163F559195CA85B001EDCFD /* IJFakeAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F555195CA85B001EDCFD /* IJFakeAFNetworkingBackend.m */; };
 		4163F560195CA871001EDCFD /* IJAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F55B195CA871001EDCFD /* IJAbstractDocument.m */; };
@@ -60,7 +60,7 @@
 		4163F543195CA7DB001EDCFD /* IKJaymaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaTests-Info.plist"; sourceTree = "<group>"; };
 		4163F545195CA7DB001EDCFD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4163F551195CA85B001EDCFD /* IJAbstractDocumentTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractDocumentTests.m; sourceTree = "<group>"; };
-		4163F552195CA85B001EDCFD /* IJAbstractRepoTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractRepoTests.m; sourceTree = "<group>"; };
+		4163F552195CA85B001EDCFD /* IJAbstractRepositoryTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractRepositoryTests.m; sourceTree = "<group>"; };
 		4163F553195CA85B001EDCFD /* IJAFNetworkingBackendTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackendTests.m; sourceTree = "<group>"; };
 		4163F554195CA85B001EDCFD /* IJFakeAFNetworkingBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJFakeAFNetworkingBackend.h; sourceTree = "<group>"; };
 		4163F555195CA85B001EDCFD /* IJFakeAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJFakeAFNetworkingBackend.m; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 				4163F565195CB23A001EDCFD /* Fake Classes */,
 				4163F551195CA85B001EDCFD /* IJAbstractDocumentTests.m */,
 				4163F553195CA85B001EDCFD /* IJAFNetworkingBackendTests.m */,
-				4163F552195CA85B001EDCFD /* IJAbstractRepoTests.m */,
+				4163F552195CA85B001EDCFD /* IJAbstractRepositoryTests.m */,
 				4163F542195CA7DB001EDCFD /* Supporting Files */,
 			);
 			path = IKJaymaTests;
@@ -367,7 +367,7 @@
 				41DA0CC6195DDB2E0028EDCE /* IJSampleDocument.m in Sources */,
 				4163F558195CA85B001EDCFD /* IJAFNetworkingBackendTests.m in Sources */,
 				4163F568195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m in Sources */,
-				4163F557195CA85B001EDCFD /* IJAbstractRepoTests.m in Sources */,
+				4163F557195CA85B001EDCFD /* IJAbstractRepositoryTests.m in Sources */,
 				41DA0CCA195DE1E10028EDCE /* IJSampleRepository.m in Sources */,
 				4163F556195CA85B001EDCFD /* IJAbstractDocumentTests.m in Sources */,
 			);

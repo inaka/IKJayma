@@ -21,10 +21,10 @@
 #import "IJFakeAFNetworkingBackend.h"
 #import "IJSampleDocument.h"
 
-@interface IJAbstractRepoTests : XCTestCase
+@interface IJAbstractRepositoryTests : XCTestCase
 @end
 
-@implementation IJAbstractRepoTests
+@implementation IJAbstractRepositoryTests
 {
     IJSampleRepository * sut;
     IJFakeAFNetworkingBackend * fakeBackend;
