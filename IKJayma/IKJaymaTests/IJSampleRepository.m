@@ -1,14 +1,14 @@
 //
-//  IJSampleRepo.m
+//  IJSampleRepository.m
 //  IKJayma
 //
 //  Created by Gera on 6/27/14.
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IJSampleRepo.h"
+#import "IJSampleRepository.h"
 #import "IJSampleDocument.h"
-@implementation IJSampleRepo
+@implementation IJSampleRepository
 - (id)initWithBackend:(IJAFNetworkingBackend *)backend
 {
     if (self = [super init])

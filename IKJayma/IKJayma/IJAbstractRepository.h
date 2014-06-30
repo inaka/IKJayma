@@ -1,5 +1,5 @@
 //
-//  IJAbstractRepo.h
+//  IJAbstractRepository.h
 //  IKJayma
 //
 //  Created by Gera on 6/26/14.
@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "IJAFNetworkingBackend.h"
 #import "IJAbstractDocument.h"
-@interface IJAbstractRepo : NSObject
+@interface IJAbstractRepository : NSObject
 @property (nonatomic,retain) NSString * serverUrl;
 @property (nonatomic,retain) NSString * basePath;
 @property (nonatomic,retain) IJAFNetworkingBackend * backend;

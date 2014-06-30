@@ -1,13 +1,13 @@
 //
-//  IJSampleRepo.h
+//  IJSampleRepository.h
 //  IKJayma
 //
 //  Created by Gera on 6/27/14.
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IJAbstractRepo.h"
+#import "IJAbstractRepository.h"
 
-@interface IJSampleRepo : IJAbstractRepo
+@interface IJSampleRepository : IJAbstractRepository
 
 @end

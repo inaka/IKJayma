@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface IJAbstractDocument : NSObject
-@property (nonatomic,retain) NSString * documentId;
+@property (nonatomic,strong) NSString * documentId;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
 -(NSDictionary *)dictionaryRepresentation;
 @end

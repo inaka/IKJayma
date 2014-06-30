@@ -6,8 +6,8 @@
 //
 
     // Class under test
-#import "IJAbstractRepo.h"
-#import "IJSampleRepo.h"
+#import "IJAbstractRepository.h"
+#import "IJSampleRepository.h"
 
     // Collaborators
 
@@ -26,7 +26,7 @@
 
 @implementation IJAbstractRepoTests
 {
-    IJSampleRepo * sut;
+    IJSampleRepository * sut;
     IJFakeAFNetworkingBackend * fakeBackend;
     IJSampleDocument * sampleDocument;
     IJSampleDocument *  sampleDocumentWithId;
@@ -43,11 +43,11 @@
     
     
     fakeBackend = [[IJFakeAFNetworkingBackend alloc]init];
-    sut = [[IJSampleRepo alloc] initWithBackend:fakeBackend];
+    sut = [[IJSampleRepository alloc] initWithBackend:fakeBackend];
 }
 - (void)test_initWithBackendShouldReturnAbstractRepo
 {
-    expect(sut).to.beKindOf([IJAbstractRepo class]);
+    expect(sut).to.beKindOf([IJAbstractRepository class]);
 }
 
 #pragma mark Create Document Tests
