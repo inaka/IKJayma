@@ -15,5 +15,11 @@
 @property (nonatomic,retain) IJAFNetworkingBackend * backend;
 -(id)initWithBackend:(IJAFNetworkingBackend *)backend;
 -(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure;
+-(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure;
+-(void)deleteDocument:(IJAbstractDocument *)document success:(void (^)(BOOL successful))success failure:(void (^)(NSError *error))failure;
+-(void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL successful) )success failure:(void (^)(NSError *error))failure;
+-(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure;
+-(void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure;
+-(void)findAllDocumentsWithSuccess:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure;
 -(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject;
 @end

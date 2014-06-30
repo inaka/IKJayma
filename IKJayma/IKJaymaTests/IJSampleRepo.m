@@ -14,7 +14,7 @@
     if (self = [super init])
     {
         self.backend = backend;
-        self.serverUrl = @"sample.com";
+        self.serverUrl = @"http://sample.com";
         self.basePath = @"samples";
     }
     return self;
