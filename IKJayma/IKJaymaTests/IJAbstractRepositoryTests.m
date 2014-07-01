@@ -472,6 +472,60 @@
     expect(errorFromServer).to.beKindOf([NSError class]);
 }
 
+
+#pragma mark Refresh document tests
+-(void)test_refreshDocumentShouldSendGetRequest
+{
+    [sut refreshDocument:sampleDocumentWithId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect(lastRequest.HTTPMethod).to.equal(@"GET");
+}
+-(void)test_refreshDocumentShouldPointToCorrectURL
+{
+    [sut refreshDocument:sampleDocumentWithId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect(lastRequest.URL.absoluteString).to.equal([NSString stringWithFormat:@"http://sample.com/samples/%@",sampleDocumentWithId.documentId]);
+}
+-(void)test_refreshDocumentShouldReturnEmptyHTTPBody
+{
+    [sut refreshDocument:sampleDocumentWithId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect(lastRequest.HTTPBody).to.equal(nil);
+}
+-(void)test_refreshDocumentShouldReturnJsonAcceptHeader
+{
+    [sut refreshDocument:sampleDocumentWithId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect([lastRequest.allHTTPHeaderFields objectForKey:@"accept"]).to.equal(@"application/json");
+}
+-(void)test_refreshDocumentShouldCallSuccessWithSuccessAndFreshDocument
+{
+    __block IJSampleDocument * documentFromServer = [[IJSampleDocument alloc]initWithDictionary:@{@"id":@"1"}];
+    __block BOOL successFromServer = nil;
+    
+    [sut refreshDocument:documentFromServer success:^(BOOL success) {
+        successFromServer = success;
+    } failure:nil];
+    IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
+    operation.successBlock (operation,[sampleDocumentWithId dictionaryRepresentation]);
+    
+    expect(documentFromServer).to.beKindOf([IJSampleDocument class]);
+    expect(successFromServer).to.equal(@YES);
+    expect([documentFromServer dictionaryRepresentation]).to.equal([sampleDocumentWithId dictionaryRepresentation]);
+}
+-(void)test_refreshDocumentShouldCallFailureWithError
+{
+    __block NSError * errorFromServer = nil;
+    
+    [sut refreshDocument:sampleDocument success:nil failure:^(NSError *error) {
+        errorFromServer = error;
+    }];
+    IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
+    operation.failureBlock (operation, [self someError]);
+    
+    expect(errorFromServer).to.beKindOf([NSError class]);
+}
+
 -(NSError *)someError
 {
     return [NSError errorWithDomain:@"" code:0 userInfo:@{}];

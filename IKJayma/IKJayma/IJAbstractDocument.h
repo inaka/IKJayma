@@ -11,5 +11,6 @@
 @interface IJAbstractDocument : NSObject
 @property (nonatomic,strong) NSString * documentId;
 -(id)initWithDictionary:(NSDictionary *)dictionary;
+-(void)refreshWithDictionary:(NSDictionary *)dictionary;
 -(NSDictionary *)dictionaryRepresentation;
 @end

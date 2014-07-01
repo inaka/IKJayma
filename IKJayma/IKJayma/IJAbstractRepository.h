@@ -21,5 +21,6 @@
 -(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure;
 -(void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure;
 -(void)findAllDocumentsWithSuccess:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure;
+-(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^) (NSError *error))failure;
 -(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject;
 @end

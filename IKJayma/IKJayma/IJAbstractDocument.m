@@ -14,7 +14,10 @@
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;
 }
-
+-(void)refreshWithDictionary:(NSDictionary *)dictionary
+{
+    NSAssert(NO, @"This is an abstract method and should be overridden");
+}
 -(NSDictionary *)dictionaryRepresentation
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");

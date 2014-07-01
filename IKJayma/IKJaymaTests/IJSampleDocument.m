@@ -24,6 +24,11 @@
     }
     return self;
 }
+-(void)refreshWithDictionary:(NSDictionary *)dictionary
+{
+    self.dictionary = dictionary;
+    self.documentId = dictionary[@"id"];
+}
 -(NSDictionary *)dictionaryRepresentation
 {
     return self.dictionary;

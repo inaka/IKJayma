@@ -139,6 +139,22 @@
 {
     [self findDocumentsWithConditions:nil success:success failure:failure];
 }
+-(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^) (NSError *error))failure
+{
+    [self findDocumentWithId:document.documentId success:^(IJAbstractDocument *documentFromServer) {
+        [document refreshWithDictionary:[documentFromServer dictionaryRepresentation] ];
+        if (success)
+        {
+            success (YES);
+        }
+    } failure:^(NSError *error) {
+        if (failure)
+        {
+            failure (error);
+        }
+    }];
+}
+#pragma mark Auxiliar Methods
 -(NSString *)queryStringFromDictionary:(NSDictionary *)dictionary
 {
     NSMutableArray * parametersArray = [NSMutableArray array];
@@ -148,7 +164,6 @@
         [parametersArray addObject:[queryParam stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     }
     return [parametersArray componentsJoinedByString:@"&"];
-    
 }
 -(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject
 {

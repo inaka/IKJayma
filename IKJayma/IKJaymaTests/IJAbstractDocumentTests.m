@@ -27,31 +27,38 @@
     IJSampleDocument * sut;
     NSDictionary * dictionary;
 }
-- (void) setUp
+-(void) setUp
 {
     [super setUp];
     dictionary = @{@"id":@"1" , @"name":@"sample"};
     sut = [[IJSampleDocument alloc] initWithDictionary:dictionary];
 }
 
-- (void)test_initWithDictionaryShouldWork
+-(void)test_initWithDictionaryShouldWork
 {
     expect(sut).to.beKindOf([IJAbstractDocument class]);
 }
-- (void)test_dictionaryRepresentationShouldReturnProperDictionary
+-(void)test_dictionaryRepresentationShouldReturnProperDictionary
 {
     expect([sut dictionaryRepresentation]).to.equal(dictionary);
 }
-- (void)test_idShouldBe1
+-(void)test_idShouldBe1
 {
     expect(sut.documentId).to.equal(@"1");
 }
-- (void)test_idShouldBeDictionaryId
+-(void)test_idShouldBeDictionaryId
 {
     NSString * dictionaryId = [NSString stringWithFormat:@"%d",arc4random()%100];
     NSDictionary * freshDictionary = @{@"id":dictionaryId};
     IJSampleDocument * freshSut = [[IJSampleDocument alloc] initWithDictionary:freshDictionary];
     
     expect(freshSut.documentId).to.equal(dictionaryId);
+}
+-(void)test_refreshWithDictionaryShouldRefreshDocument
+{
+    NSDictionary * dictionaryWithNewData = @{@"id":@"2" , @"name":@"other sample"};
+    [sut refreshWithDictionary:dictionaryWithNewData];
+    
+    expect([sut dictionaryRepresentation]).to.equal(dictionaryWithNewData);
 }
 @end
