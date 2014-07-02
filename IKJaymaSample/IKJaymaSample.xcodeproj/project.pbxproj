@@ -1,0 +1,476 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
+		4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814B196441E7004E05C7 /* CoreGraphics.framework */; };
+		4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
+		41088154196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088152196441E7004E05C7 /* InfoPlist.strings */; };
+		41088156196441E7004E05C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088155196441E7004E05C7 /* main.m */; };
+		4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088159196441E7004E05C7 /* IKAppDelegate.m */; };
+		4108815D196441E7004E05C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4108815B196441E7004E05C7 /* Main.storyboard */; };
+		41088160196441E7004E05C7 /* IKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108815F196441E7004E05C7 /* IKViewController.m */; };
+		41088162196441E7004E05C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41088161196441E7004E05C7 /* Images.xcassets */; };
+		41088169196441E7004E05C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088168196441E7004E05C7 /* XCTest.framework */; };
+		4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
+		4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
+		41088173196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088171196441E7004E05C7 /* InfoPlist.strings */; };
+		41088175196441E7004E05C7 /* IKJaymaSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088174196441E7004E05C7 /* IKJaymaSampleTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4108816C196441E7004E05C7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4108813E196441E7004E05C7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41088145196441E7004E05C7;
+			remoteInfo = IKJaymaSample;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		41088146196441E7004E05C7 /* IKJaymaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		41088149196441E7004E05C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4108814B196441E7004E05C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4108814D196441E7004E05C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		41088151196441E7004E05C7 /* IKJaymaSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaSample-Info.plist"; sourceTree = "<group>"; };
+		41088153196441E7004E05C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41088155196441E7004E05C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		41088157196441E7004E05C7 /* IKJaymaSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IKJaymaSample-Prefix.pch"; sourceTree = "<group>"; };
+		41088158196441E7004E05C7 /* IKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKAppDelegate.h; sourceTree = "<group>"; };
+		41088159196441E7004E05C7 /* IKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKAppDelegate.m; sourceTree = "<group>"; };
+		4108815C196441E7004E05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4108815E196441E7004E05C7 /* IKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKViewController.h; sourceTree = "<group>"; };
+		4108815F196441E7004E05C7 /* IKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKViewController.m; sourceTree = "<group>"; };
+		41088161196441E7004E05C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKJaymaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41088168196441E7004E05C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		41088170196441E7004E05C7 /* IKJaymaSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaSampleTests-Info.plist"; sourceTree = "<group>"; };
+		41088172196441E7004E05C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		41088174196441E7004E05C7 /* IKJaymaSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKJaymaSampleTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		41088143196441E7004E05C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */,
+				4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */,
+				4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41088164196441E7004E05C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41088169196441E7004E05C7 /* XCTest.framework in Frameworks */,
+				4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */,
+				4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4108813D196441E7004E05C7 = {
+			isa = PBXGroup;
+			children = (
+				4108814F196441E7004E05C7 /* IKJaymaSample */,
+				4108816E196441E7004E05C7 /* IKJaymaSampleTests */,
+				41088148196441E7004E05C7 /* Frameworks */,
+				41088147196441E7004E05C7 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		41088147196441E7004E05C7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				41088146196441E7004E05C7 /* IKJaymaSample.app */,
+				41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		41088148196441E7004E05C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41088149196441E7004E05C7 /* Foundation.framework */,
+				4108814B196441E7004E05C7 /* CoreGraphics.framework */,
+				4108814D196441E7004E05C7 /* UIKit.framework */,
+				41088168196441E7004E05C7 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4108814F196441E7004E05C7 /* IKJaymaSample */ = {
+			isa = PBXGroup;
+			children = (
+				41088158196441E7004E05C7 /* IKAppDelegate.h */,
+				41088159196441E7004E05C7 /* IKAppDelegate.m */,
+				4108815B196441E7004E05C7 /* Main.storyboard */,
+				4108815E196441E7004E05C7 /* IKViewController.h */,
+				4108815F196441E7004E05C7 /* IKViewController.m */,
+				41088161196441E7004E05C7 /* Images.xcassets */,
+				41088150196441E7004E05C7 /* Supporting Files */,
+			);
+			path = IKJaymaSample;
+			sourceTree = "<group>";
+		};
+		41088150196441E7004E05C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41088151196441E7004E05C7 /* IKJaymaSample-Info.plist */,
+				41088152196441E7004E05C7 /* InfoPlist.strings */,
+				41088155196441E7004E05C7 /* main.m */,
+				41088157196441E7004E05C7 /* IKJaymaSample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4108816E196441E7004E05C7 /* IKJaymaSampleTests */ = {
+			isa = PBXGroup;
+			children = (
+				41088174196441E7004E05C7 /* IKJaymaSampleTests.m */,
+				4108816F196441E7004E05C7 /* Supporting Files */,
+			);
+			path = IKJaymaSampleTests;
+			sourceTree = "<group>";
+		};
+		4108816F196441E7004E05C7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				41088170196441E7004E05C7 /* IKJaymaSampleTests-Info.plist */,
+				41088171196441E7004E05C7 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		41088145196441E7004E05C7 /* IKJaymaSample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41088178196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSample" */;
+			buildPhases = (
+				41088142196441E7004E05C7 /* Sources */,
+				41088143196441E7004E05C7 /* Frameworks */,
+				41088144196441E7004E05C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IKJaymaSample;
+			productName = IKJaymaSample;
+			productReference = 41088146196441E7004E05C7 /* IKJaymaSample.app */;
+			productType = "com.apple.product-type.application";
+		};
+		41088166196441E7004E05C7 /* IKJaymaSampleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4108817B196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSampleTests" */;
+			buildPhases = (
+				41088163196441E7004E05C7 /* Sources */,
+				41088164196441E7004E05C7 /* Frameworks */,
+				41088165196441E7004E05C7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4108816D196441E7004E05C7 /* PBXTargetDependency */,
+			);
+			name = IKJaymaSampleTests;
+			productName = IKJaymaSampleTests;
+			productReference = 41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4108813E196441E7004E05C7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = IK;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Inaka Labs S.A.";
+				TargetAttributes = {
+					41088166196441E7004E05C7 = {
+						TestTargetID = 41088145196441E7004E05C7;
+					};
+				};
+			};
+			buildConfigurationList = 41088141196441E7004E05C7 /* Build configuration list for PBXProject "IKJaymaSample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4108813D196441E7004E05C7;
+			productRefGroup = 41088147196441E7004E05C7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				41088145196441E7004E05C7 /* IKJaymaSample */,
+				41088166196441E7004E05C7 /* IKJaymaSampleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		41088144196441E7004E05C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41088162196441E7004E05C7 /* Images.xcassets in Resources */,
+				41088154196441E7004E05C7 /* InfoPlist.strings in Resources */,
+				4108815D196441E7004E05C7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41088165196441E7004E05C7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41088173196441E7004E05C7 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		41088142196441E7004E05C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
+				41088156196441E7004E05C7 /* main.m in Sources */,
+				41088160196441E7004E05C7 /* IKViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		41088163196441E7004E05C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41088175196441E7004E05C7 /* IKJaymaSampleTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4108816D196441E7004E05C7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41088145196441E7004E05C7 /* IKJaymaSample */;
+			targetProxy = 4108816C196441E7004E05C7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		41088152196441E7004E05C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41088153196441E7004E05C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4108815B196441E7004E05C7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4108815C196441E7004E05C7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		41088171196441E7004E05C7 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				41088172196441E7004E05C7 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		41088176196441E7004E05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		41088177196441E7004E05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		41088179196441E7004E05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
+				INFOPLIST_FILE = "IKJaymaSample/IKJaymaSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4108817A196441E7004E05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
+				INFOPLIST_FILE = "IKJaymaSample/IKJaymaSample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4108817C196441E7004E05C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "IKJaymaSampleTests/IKJaymaSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		4108817D196441E7004E05C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
+				INFOPLIST_FILE = "IKJaymaSampleTests/IKJaymaSampleTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		41088141196441E7004E05C7 /* Build configuration list for PBXProject "IKJaymaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41088176196441E7004E05C7 /* Debug */,
+				41088177196441E7004E05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		41088178196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41088179196441E7004E05C7 /* Debug */,
+				4108817A196441E7004E05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4108817B196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSampleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4108817C196441E7004E05C7 /* Debug */,
+				4108817D196441E7004E05C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4108813E196441E7004E05C7 /* Project object */;
+}
