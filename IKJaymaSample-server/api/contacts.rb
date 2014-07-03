@@ -5,7 +5,7 @@ module IKJayma
   class NotFoundException < StandardError; end
 
   class Contacts < Grape::API
-
+    use ApiLogger
     format :json
 
     rescue_from EmptyBodyException do |_e|
