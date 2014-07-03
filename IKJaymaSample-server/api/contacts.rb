@@ -8,6 +8,8 @@ module IKJayma
     use ApiLogger
     format :json
 
+    dumb_email = /^[a-z0-9+_-]+[@][a-z0-9+_-]+[.][a-z0-9+_-]+$/
+
     rescue_from EmptyBodyException do |_e|
       Rack::Response.new([""], 204, "Content-Type" => "application/json")
     end
@@ -31,7 +33,7 @@ module IKJayma
       desc "Create a new contact"
       params do
         requires :name, type: String, desc: "Contact name"
-        optional :email, type: String, desc: "Contact mail"
+        optional :email, type: String, desc: "Contact mail", regexp: dumb_email
         optional :phone, type: String, desc: "Contact phone number"
       end
       post do
@@ -58,7 +60,7 @@ module IKJayma
       params do
         requires :id, type: String, desc: "Contact Id"
         requires :name, type: String, desc: "Contact name"
-        optional :email, type: String, desc: "Contact mail"
+        optional :email, type: String, desc: "Contact mail", regexp: dumb_email
         optional :phone, type: String, desc: "Contact phone number"
       end
       route_param :id do
