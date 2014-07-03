@@ -47,7 +47,7 @@ module IKJayma
       desc "Return all the contacts (or just some of them)"
       params do
         optional :name, type: String, desc: "Contact name"
-        optional :email, type: String, desc: "Contact mail", regexp: dumb_email
+        optional :email, type: String, desc: "Contact mail"
         optional :phone, type: String, desc: "Contact phone number"
       end
       get do
