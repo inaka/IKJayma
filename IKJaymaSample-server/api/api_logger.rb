@@ -1,8 +1,8 @@
 class ApiLogger < Grape::Middleware::Base
   
   def before
-    p "[api] Requested: #{request_log_data.to_s}\n" +
-     "[api] #{response_log_data[:description]} #{response_log_data[:source_file]}:#{response_log_data[:source_line]}"
+    env.logger.info "\n\t[api] Requested: #{request_log_data.to_s}" +
+     "\n\t[api] #{response_log_data[:description]} #{response_log_data[:source_file]}:#{response_log_data[:source_line]}"
   end
   
 private
