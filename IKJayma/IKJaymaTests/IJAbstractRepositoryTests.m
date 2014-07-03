@@ -8,6 +8,7 @@
 // Class under test
 #import "IJAbstractRepository.h"
 #import "IJSampleRepository.h"
+#import "IJError.h"
 
 // Collaborators
 
@@ -38,9 +39,6 @@
     sampleDocument =  [[IJSampleDocument alloc] initWithDictionary:@{@"name":@"andres"}];
     NSString * documentRandomId = [NSString stringWithFormat:@"%d",arc4random()%100];
     sampleDocumentWithId = [[IJSampleDocument alloc] initWithDictionary:@{@"name":@"andres" , @"id":documentRandomId}];
-    
-    
-    
     
     fakeBackend = [[IJFakeAFNetworkingBackend alloc]init];
     sut = [[IJSampleRepository alloc] initWithBackend:fakeBackend];
@@ -94,15 +92,15 @@
 
 -(void)test_createDocumentShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     
-    [sut createDocument:sampleDocument success:nil failure:^(id responseObject, NSError *error) {
+    [sut createDocument:sampleDocument success:nil failure:^(IJError *error) {
         errorFromServer = error;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
 }
 
 #pragma mark Update Document Tests
@@ -150,17 +148,17 @@
 }
 -(void)test_updateDocumentShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     __block id responseObjectFromServer = nil;
     
-    [sut updateDocument:sampleDocument success:nil failure:^(id responseObject, NSError *error) {
+    [sut updateDocument:sampleDocument success:nil failure:^(IJError *error) {
         errorFromServer = error;
-        responseObjectFromServer = responseObject;
+        responseObjectFromServer = error.responseObject;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
     expect(responseObjectFromServer).to.equal(operation.responseObject);
 }
 
@@ -204,15 +202,15 @@
 }
 -(void)test_deleteDocumentShouldCallFailureWithObject
 {
-    __block NSError * errorFromServer;
+    __block IJError * errorFromServer;
     
-    [sut deleteDocument:sampleDocumentWithId success:nil failure:^(id responseObject, NSError *error) {
+    [sut deleteDocument:sampleDocumentWithId success:nil failure:^(IJError *error) {
         errorFromServer = error;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation,[self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
 }
 #pragma mark Delete With Id Tests
 -(void)test_deleteDocumentWithIdShouldSendDeleteRequest
@@ -253,15 +251,15 @@
 }
 -(void)test_deleteDocumentWithIdShouldCallFailureWithObjectWithId
 {
-    __block NSError * errorFromServer;
+    __block IJError * errorFromServer;
     
-    [sut deleteDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(id responseObject, NSError *error) {
+    [sut deleteDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(IJError *error) {
         errorFromServer = error;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation,[self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
 }
 #pragma mark Find with Id from server tests
 
@@ -304,17 +302,17 @@
 }
 -(void)test_findDocumentWithIdShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     __block id responseObjectFromServer = nil;
     
-    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(id responseObject, NSError *error) {
+    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(IJError *error) {
         errorFromServer = error;
-        responseObjectFromServer = responseObject;
+        responseObjectFromServer = error.responseObject;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
     expect(responseObjectFromServer).to.equal(operation.responseObject);
     
 }
@@ -389,17 +387,17 @@
 }
 -(void)test_findDocumentsWithConditionsShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     __block id responseObjectFromServer = nil;
     
-    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(id responseObject, NSError *error) {
+    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(IJError *error) {
         errorFromServer = error;
-        responseObjectFromServer = responseObject;
+        responseObjectFromServer = error.responseObject;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
     expect(responseObjectFromServer).to.equal(operation.responseObject);
 }
 
@@ -467,17 +465,17 @@
 }
 -(void)test_findAllDocumentsShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     __block id responseObjectFromServer = nil;
     
-    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(id responseObject, NSError *error) {
+    [sut findDocumentWithId:sampleDocumentWithId.documentId success:nil failure:^(IJError *error) {
         errorFromServer = error;
-        responseObjectFromServer = responseObject;
+        responseObjectFromServer = error.responseObject;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
     expect(responseObjectFromServer).to.equal(operation.responseObject);
 }
 
@@ -524,22 +522,25 @@
 }
 -(void)test_refreshDocumentShouldCallFailureWithError
 {
-    __block NSError * errorFromServer = nil;
+    __block IJError * errorFromServer = nil;
     __block id responseObjectFromServer = nil;
     
-    [sut refreshDocument:sampleDocument success:nil failure:^(id responseObject, NSError *error) {
+    [sut refreshDocument:sampleDocument success:nil failure:^(IJError *error) {
         errorFromServer = error;
-        responseObjectFromServer = responseObject;
+        responseObjectFromServer = error.responseObject;
     }];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
     operation.failureBlock (operation, [self someError]);
     
-    expect(errorFromServer).to.beKindOf([NSError class]);
+    expect(errorFromServer).to.beKindOf([IJError class]);
     expect(responseObjectFromServer).to.equal(operation.responseObject);
 }
 
 -(NSError *)someError
 {
-    return [NSError errorWithDomain:@"" code:0 userInfo:@{}];
+    NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc]initWithURL:[NSURL URLWithString:@"www.google.com.ar"] statusCode:arc4random()%400+100 HTTPVersion:@"1.1" headerFields:@{}];
+    NSError *error = [NSError errorWithDomain:@"menosfruta" code:arc4random()%100 userInfo:@{}];
+    id responseObject = @(arc4random()%10);
+    return [[IJError alloc]initWithResponse:response responseObject:responseObject andError:error];
 }
 @end

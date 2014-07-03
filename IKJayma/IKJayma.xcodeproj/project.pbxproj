@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410002931965F5A600331CA6 /* IJErrorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002921965F5A600331CA6 /* IJErrorTests.m */; };
+		410002961965F87A00331CA6 /* IJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002951965F87A00331CA6 /* IJError.m */; };
 		4163F52C195CA7DB001EDCFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4163F52B195CA7DB001EDCFD /* Foundation.framework */; };
 		4163F53A195CA7DB001EDCFD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4163F539195CA7DB001EDCFD /* XCTest.framework */; };
 		4163F53B195CA7DB001EDCFD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4163F52B195CA7DB001EDCFD /* Foundation.framework */; };
@@ -51,6 +53,9 @@
 
 /* Begin PBXFileReference section */
 		0E408E3BCF2141AB97975FD7 /* libPods-IKJaymaTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJaymaTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		410002921965F5A600331CA6 /* IJErrorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJErrorTests.m; sourceTree = "<group>"; };
+		410002941965F87A00331CA6 /* IJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJError.h; sourceTree = "<group>"; };
+		410002951965F87A00331CA6 /* IJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJError.m; sourceTree = "<group>"; };
 		4163F528195CA7DB001EDCFD /* libIKJayma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libIKJayma.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4163F52B195CA7DB001EDCFD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4163F52F195CA7DB001EDCFD /* IKJayma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IKJayma-Prefix.pch"; sourceTree = "<group>"; };
@@ -142,6 +147,8 @@
 		4163F52D195CA7DB001EDCFD /* IKJayma */ = {
 			isa = PBXGroup;
 			children = (
+				410002941965F87A00331CA6 /* IJError.h */,
+				410002951965F87A00331CA6 /* IJError.m */,
 				4163F55A195CA871001EDCFD /* IJAbstractDocument.h */,
 				4163F55B195CA871001EDCFD /* IJAbstractDocument.m */,
 				4163F55C195CA871001EDCFD /* IJAbstractRepository.h */,
@@ -167,6 +174,7 @@
 				41DA0CC7195DDB370028EDCE /* Sample classes */,
 				4163F565195CB23A001EDCFD /* Fake Classes */,
 				4163F551195CA85B001EDCFD /* IJAbstractDocumentTests.m */,
+				410002921965F5A600331CA6 /* IJErrorTests.m */,
 				4163F553195CA85B001EDCFD /* IJAFNetworkingBackendTests.m */,
 				4163F552195CA85B001EDCFD /* IJAbstractRepositoryTests.m */,
 				4163F542195CA7DB001EDCFD /* Supporting Files */,
@@ -354,6 +362,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4163F562195CA871001EDCFD /* IJAFNetworkingBackend.m in Sources */,
+				410002961965F87A00331CA6 /* IJError.m in Sources */,
 				4163F561195CA871001EDCFD /* IJAbstractRepository.m in Sources */,
 				4163F560195CA871001EDCFD /* IJAbstractDocument.m in Sources */,
 			);
@@ -364,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4163F559195CA85B001EDCFD /* IJFakeAFNetworkingBackend.m in Sources */,
+				410002931965F5A600331CA6 /* IJErrorTests.m in Sources */,
 				41DA0CC6195DDB2E0028EDCE /* IJSampleDocument.m in Sources */,
 				4163F558195CA85B001EDCFD /* IJAFNetworkingBackendTests.m in Sources */,
 				4163F568195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m in Sources */,

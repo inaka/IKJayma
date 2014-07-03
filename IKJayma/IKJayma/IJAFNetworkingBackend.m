@@ -20,7 +20,7 @@
 }
 
 
-- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(NSOperation *operation, id responseObject, NSError *error))failure
+- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure
 {
     AFHTTPRequestOperation *operation = [self operationWithRequest:request];
     
@@ -29,7 +29,8 @@
     [operation setCompletionBlockWithSuccess:success failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         if (failure)
         {
-            failure (operation, operation.responseObject, error);
+            IJError * erro = [[IJError alloc]initWithResponse:operation.response responseObject:operation.responseObject andError:error];
+            failure (erro);
         }
     }];
 
