@@ -48,12 +48,11 @@
     self.contactToUpdate.contactEmail = self.textFieldEmail.text;
     self.contactToUpdate.contactPhone = self.textFieldPhone.text;
     
-    [self.contactsRepository updateDocument:self.contactToUpdate success:^(IJAbstractDocument *document) {
-        
-    } failure:^(NSError *error) {
-    
-    }];
-    
+    [self.contactsRepository updateContact:self.contactToUpdate success:^(IKContact *document) {
+        [self.navigationController popViewControllerAnimated:YES];
+    } failure:^(NSString * errorMessage) {
+        [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show] ;
+    }];    
 }
 - (void)didReceiveMemoryWarning
 {

@@ -54,9 +54,7 @@
     [freshSut queueRequest:request success:^(NSOperation *operation, id responseObject) {
         sutSuccessResponseObject = responseObject;
         sutSuccessRequestOperation = operation;
-    } failure:^(NSOperation *operation, NSError *error) {
-        
-    } ];
+    } failure:nil];
     
     NSString * sampleResponse = @"123";
     
@@ -65,5 +63,30 @@
     operation.successBlock(nil, sampleResponse);
     
     expect(sutSuccessResponseObject).will.equal(sampleResponse);
+}
+
+- (void)test_queueRequestShouldCallFailureBlock
+{
+    // I need to create a sut that uses a real operation queue (not a fake)
+    IJFakeAFNetworkingBackend *freshSut = [[IJFakeAFNetworkingBackend alloc] init];
+    __block id sutFailureResponseObject = nil;
+    __block NSOperation * sutFailureRequestOperation = nil;
+    __block NSError * sutError = nil;
+    NSURLRequest * request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"www.google.com.ar"]];
+    
+    [freshSut queueRequest:request success:^(NSOperation *operation, id responseObject) {
+        
+    } failure:^(NSOperation *operation, id responseObject, NSError *error) {
+        sutFailureResponseObject = responseObject;
+        sutFailureRequestOperation = operation;
+        sutError = error;
+    }];
+    
+    
+    /* We simulate a success block fire */
+    IJFakeHTTPRequestOperation *operation = (IJFakeHTTPRequestOperation *)[freshSut lastOperation];
+    operation.failureBlock(operation, nil);
+
+    expect(sutFailureResponseObject).will.equal(operation.responseObject);
 }
 @end

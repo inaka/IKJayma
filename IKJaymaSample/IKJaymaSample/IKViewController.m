@@ -28,11 +28,11 @@
 }
 -(void)getContactsFromServer
 {
-    [self.contactsRepository findAllDocumentsWithSuccess:^(NSArray *documents) {
-        self.contactsArray = [NSMutableArray arrayWithArray:documents];
+    [self.contactsRepository findAllContactsWithSuccess:^(NSArray *contacts) {
+        self.contactsArray = [NSMutableArray arrayWithArray:contacts];
         [self.tableView reloadData];
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSString * errorMessage) {
+        [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show] ;
     }];
 }
 -(void)viewDidAppear:(BOOL)animated

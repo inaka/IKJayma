@@ -14,6 +14,7 @@
     self = [super initWithRequest:urlRequest];
     if (self)
     {
+        self.responseObject = @{@"error" : @"this is an error. :)"};
     }
     return self;
 }

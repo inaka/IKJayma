@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100027D1965982800331CA6 /* IKCreateContactViewController.m */; };
 		410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002851965D5F300331CA6 /* IKUpdateContactViewController.m */; };
+		4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002891965E8F300331CA6 /* IJAbstractDocument.m */; };
+		410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028B1965E8F300331CA6 /* IJAbstractRepository.m */; };
+		410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */; };
 		4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
 		4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814B196441E7004E05C7 /* CoreGraphics.framework */; };
 		4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
@@ -22,9 +25,6 @@
 		4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
 		4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
 		41088173196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088171196441E7004E05C7 /* InfoPlist.strings */; };
-		41088186196443FB004E05C7 /* IJAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088180196443FB004E05C7 /* IJAbstractDocument.m */; };
-		41088187196443FB004E05C7 /* IJAbstractRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088182196443FB004E05C7 /* IJAbstractRepository.m */; };
-		41088188196443FB004E05C7 /* IJAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088184196443FB004E05C7 /* IJAFNetworkingBackend.m */; };
 		4108818C196446AD004E05C7 /* IKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818B196446AD004E05C7 /* IKContact.m */; };
 		4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818E19644D83004E05C7 /* IKContactsRepository.m */; };
 		5CA0B4D9A2B94C2CB29C0D57 /* libPods-IKJaymaSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DED50138AA94BC6BE7B6862 /* libPods-IKJaymaSampleTests.a */; };
@@ -48,6 +48,13 @@
 		4100027D1965982800331CA6 /* IKCreateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCreateContactViewController.m; sourceTree = "<group>"; };
 		410002841965D5F300331CA6 /* IKUpdateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKUpdateContactViewController.h; sourceTree = "<group>"; };
 		410002851965D5F300331CA6 /* IKUpdateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKUpdateContactViewController.m; sourceTree = "<group>"; };
+		410002881965E8F300331CA6 /* IJAbstractDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractDocument.h; sourceTree = "<group>"; };
+		410002891965E8F300331CA6 /* IJAbstractDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractDocument.m; sourceTree = "<group>"; };
+		4100028A1965E8F300331CA6 /* IJAbstractRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractRepository.h; sourceTree = "<group>"; };
+		4100028B1965E8F300331CA6 /* IJAbstractRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractRepository.m; sourceTree = "<group>"; };
+		4100028C1965E8F300331CA6 /* IJAFNetworkingBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAFNetworkingBackend.h; sourceTree = "<group>"; };
+		4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackend.m; sourceTree = "<group>"; };
+		4100028E1965E8F300331CA6 /* IKJayma-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKJayma-Prefix.pch"; sourceTree = "<group>"; };
 		41088146196441E7004E05C7 /* IKJaymaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41088149196441E7004E05C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4108814B196441E7004E05C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -66,13 +73,6 @@
 		41088168196441E7004E05C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		41088170196441E7004E05C7 /* IKJaymaSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaSampleTests-Info.plist"; sourceTree = "<group>"; };
 		41088172196441E7004E05C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4108817F196443FB004E05C7 /* IJAbstractDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractDocument.h; sourceTree = "<group>"; };
-		41088180196443FB004E05C7 /* IJAbstractDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractDocument.m; sourceTree = "<group>"; };
-		41088181196443FB004E05C7 /* IJAbstractRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractRepository.h; sourceTree = "<group>"; };
-		41088182196443FB004E05C7 /* IJAbstractRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractRepository.m; sourceTree = "<group>"; };
-		41088183196443FB004E05C7 /* IJAFNetworkingBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAFNetworkingBackend.h; sourceTree = "<group>"; };
-		41088184196443FB004E05C7 /* IJAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackend.m; sourceTree = "<group>"; };
-		41088185196443FB004E05C7 /* IKJayma-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKJayma-Prefix.pch"; sourceTree = "<group>"; };
 		4108818A196446AD004E05C7 /* IKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKContact.h; sourceTree = "<group>"; };
 		4108818B196446AD004E05C7 /* IKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKContact.m; sourceTree = "<group>"; };
 		4108818D19644D83004E05C7 /* IKContactsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKContactsRepository.h; sourceTree = "<group>"; };
@@ -111,10 +111,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		410002871965E8F300331CA6 /* IKJayma */ = {
+			isa = PBXGroup;
+			children = (
+				410002881965E8F300331CA6 /* IJAbstractDocument.h */,
+				410002891965E8F300331CA6 /* IJAbstractDocument.m */,
+				4100028A1965E8F300331CA6 /* IJAbstractRepository.h */,
+				4100028B1965E8F300331CA6 /* IJAbstractRepository.m */,
+				4100028C1965E8F300331CA6 /* IJAFNetworkingBackend.h */,
+				4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */,
+				4100028E1965E8F300331CA6 /* IKJayma-Prefix.pch */,
+			);
+			name = IKJayma;
+			path = ../../IKJayma/IKJayma;
+			sourceTree = "<group>";
+		};
 		4108813D196441E7004E05C7 = {
 			isa = PBXGroup;
 			children = (
-				4108817E196443FB004E05C7 /* IKJayma */,
 				4108814F196441E7004E05C7 /* IKJaymaSample */,
 				4108816E196441E7004E05C7 /* IKJaymaSampleTests */,
 				41088148196441E7004E05C7 /* Frameworks */,
@@ -150,6 +164,7 @@
 		4108814F196441E7004E05C7 /* IKJaymaSample */ = {
 			isa = PBXGroup;
 			children = (
+				410002871965E8F300331CA6 /* IKJayma */,
 				4108818919644462004E05C7 /* Abstract Sons */,
 				41088158196441E7004E05C7 /* IKAppDelegate.h */,
 				41088159196441E7004E05C7 /* IKAppDelegate.m */,
@@ -193,20 +208,6 @@
 				41088171196441E7004E05C7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4108817E196443FB004E05C7 /* IKJayma */ = {
-			isa = PBXGroup;
-			children = (
-				4108817F196443FB004E05C7 /* IJAbstractDocument.h */,
-				41088180196443FB004E05C7 /* IJAbstractDocument.m */,
-				41088181196443FB004E05C7 /* IJAbstractRepository.h */,
-				41088182196443FB004E05C7 /* IJAbstractRepository.m */,
-				41088183196443FB004E05C7 /* IJAFNetworkingBackend.h */,
-				41088184196443FB004E05C7 /* IJAFNetworkingBackend.m */,
-				41088185196443FB004E05C7 /* IKJayma-Prefix.pch */,
-			);
-			path = IKJayma;
 			sourceTree = "<group>";
 		};
 		4108818919644462004E05C7 /* Abstract Sons */ = {
@@ -386,15 +387,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				4108818C196446AD004E05C7 /* IKContact.m in Sources */,
-				41088188196443FB004E05C7 /* IJAFNetworkingBackend.m in Sources */,
 				410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */,
 				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
-				41088186196443FB004E05C7 /* IJAbstractDocument.m in Sources */,
 				4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */,
+				410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */,
 				4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */,
+				4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */,
+				410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */,
 				41088156196441E7004E05C7 /* main.m in Sources */,
 				41088160196441E7004E05C7 /* IKViewController.m in Sources */,
-				41088187196443FB004E05C7 /* IJAbstractRepository.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,12 +43,11 @@
                                          ,@"email" : self.textFieldEmail.text
                                          ,@"phone" : self.textFieldPhone.text};
     IKContact * contact = [[IKContact alloc] initWithDictionary:contactDictionary];
-    [self.contactsRepository createDocument:contact success:^(IJAbstractDocument *document) {
+    [self.contactsRepository createContact:contact success:^(IKContact *contact) {
         [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSError *error) {
-        
+    } failure:^(NSString *errorMessage) {
+                [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show];
     } ];
-     
 }
 
 - (void)didReceiveMemoryWarning
