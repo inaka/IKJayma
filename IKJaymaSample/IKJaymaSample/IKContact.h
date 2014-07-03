@@ -1,5 +1,5 @@
 //
-//  IKContactDocument.h
+//  IKContact.h
 //  IKJaymaSample
 //
 //  Created by Gera on 7/2/14.
@@ -8,8 +8,7 @@
 
 #import "IJAbstractDocument.h"
 
-@interface IKContactDocument : IJAbstractDocument
-@property (nonatomic,strong)NSString * contactId;
+@interface IKContact : IJAbstractDocument
 @property (nonatomic,strong)NSString * contactName;
 @property (nonatomic,strong)NSString * contactPhone;
 @property (nonatomic,strong)NSString * contactEmail;

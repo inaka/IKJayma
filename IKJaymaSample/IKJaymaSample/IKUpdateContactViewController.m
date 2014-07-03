@@ -1,21 +1,21 @@
 //
-//  IKCreateContactViewController.m
+//  IKUpdateContactViewController.m
 //  IKJaymaSample
 //
 //  Created by Gera on 7/3/14.
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IKCreateContactViewController.h"
+#import "IKUpdateContactViewController.h"
 
-@interface IKCreateContactViewController ()
+@interface IKUpdateContactViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textFieldName;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldEmail;
 @property (weak, nonatomic) IBOutlet UITextField *textFieldPhone;
 
 @end
 
-@implementation IKCreateContactViewController
+@implementation IKUpdateContactViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,28 +29,32 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [super viewDidLoad];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                 target:self
-                                                                                action:@selector(createContact:)];
+                                                                                action:@selector(updateContact:)];
     [[self navigationItem] setRightBarButtonItem:doneButton];
-	// Do any additional setup after loading the view.
+    
+    self.textFieldName.text = self.contactToUpdate.contactName;
+    self.textFieldPhone.text = self.contactToUpdate.contactPhone;
+    self.textFieldEmail.text = self.contactToUpdate.contactEmail;
 }
-- (IBAction)createContact:(id)sender
+- (IBAction)updateContact:(id)sender
 {
     if (!self.textFieldName.text || [self.textFieldName.text isEqualToString:@""])
         return;
-    NSDictionary * contactDictionary = @{@"name" : self.textFieldName.text
-                                         ,@"email" : self.textFieldEmail.text
-                                         ,@"phone" : self.textFieldPhone.text};
-    IKContact * contact = [[IKContact alloc] initWithDictionary:contactDictionary];
-    [self.contactsRepository createDocument:contact success:^(IJAbstractDocument *document) {
-        [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSError *error) {
+    
+    self.contactToUpdate.contactName = self.textFieldName.text;
+    self.contactToUpdate.contactEmail = self.textFieldEmail.text;
+    self.contactToUpdate.contactPhone = self.textFieldPhone.text;
+    
+    [self.contactsRepository updateDocument:self.contactToUpdate success:^(IJAbstractDocument *document) {
         
-    } ];
-     
+    } failure:^(NSError *error) {
+    
+    }];
+    
 }
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

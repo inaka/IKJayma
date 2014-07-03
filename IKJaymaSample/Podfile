@@ -1,7 +1,3 @@
 target :IKJaymaSample do
 pod 'AFNetworking', '~> 2.0'
 end
-target :IKJaymaSampleTests  do
-    pod 'Expecta', '~> 0.2.4'
-    pod 'OCMock', '~> 2.2'
-end

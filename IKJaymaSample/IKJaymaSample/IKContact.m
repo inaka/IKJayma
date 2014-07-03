@@ -6,34 +6,40 @@
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IKContactDocument.h"
+#import "IKContact.h"
 
-@implementation IKContactDocument
+@implementation IKContact
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     if (self = [super init])
     {
-        self.contactId = dictionary[@"id"] ? dictionary[@"id"] : @"";
-        self.contactName = dictionary[@"name"] ? dictionary[@"name"] : @"";
-        self.contactPhone = dictionary[@"phone"] ? dictionary[@"phone"] : @"";
-        self.contactEmail = dictionary[@"email"] ? dictionary[@"email"] : @"";
+        self.documentId = dictionary[@"id"] ? dictionary[@"id"] : @"";
+        [self refreshWithDictionary:dictionary];
     }
     return self;
 }
 -(NSDictionary *)dictionaryRepresentation
 {
-    NSDictionary * dictionary = @{ @"id" : self.contactId
-                                   ,@"phone" : self.contactPhone
-                                   ,@"name" : self.contactName
-                                   ,@"email" : self.contactEmail};
+    
+    NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
+    if (self.documentId && ![self.documentId isEqualToString:@""])
+        [dictionary setObject:self.documentId forKey:@"id"];
+    
+    if (self.contactName && ![self.contactName isEqualToString:@""])
+        [dictionary setObject:self.contactName forKey:@"name"];
+    
+    if (self.contactPhone && ![self.contactPhone isEqualToString:@""])
+        [dictionary setObject:self.contactPhone forKey:@"phone"];
+    
+    if (self.contactEmail && ![self.contactEmail isEqualToString:@""])
+        [dictionary setObject:self.contactEmail forKey:@"email"];
     
     return dictionary;
 }
 -(void)refreshWithDictionary:(NSDictionary *)dictionary
 {
-    self.contactId = dictionary[@"id"] ? dictionary[@"id"] : self.contactId;
-    self.contactName = dictionary[@"name"] ? dictionary[@"name"] : self.contactName;
-    self.contactPhone = dictionary[@"phone"] ? dictionary[@"phone"] : self.contactPhone;
-    self.contactEmail = dictionary[@"email"] ? dictionary[@"email"] : self.contactEmail;
+    self.contactName = dictionary[@"name"] ? dictionary[@"name"] : @"";
+    self.contactPhone = dictionary[@"phone"] ? dictionary[@"phone"] : @"";
+    self.contactEmail = dictionary[@"email"] ? dictionary[@"email"] : @"";
 }
 @end

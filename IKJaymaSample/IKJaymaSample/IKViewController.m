@@ -8,6 +8,7 @@
 
 #import "IKViewController.h"
 #import "IKCreateContactViewController.h"
+#import "IKUpdateContactViewController.h"
 #import "Headers.h"
 @interface IKViewController ()
 @property (nonatomic,strong) IJAFNetworkingBackend *contactsBackend;
@@ -24,12 +25,20 @@
     self.contactsArray = [NSMutableArray array];
     self.contactsBackend = [[IJAFNetworkingBackend alloc]init];
     self.contactsRepository = [[IKContactsRepository alloc]initWithBackend:self.contactsBackend];
+}
+-(void)getContactsFromServer
+{
     [self.contactsRepository findAllDocumentsWithSuccess:^(NSArray *documents) {
         self.contactsArray = [NSMutableArray arrayWithArray:documents];
         [self.tableView reloadData];
     } failure:^(NSError *error) {
         
     }];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self getContactsFromServer];
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -42,7 +51,7 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EmptyCell"];
     }
-    IKContactDocument * contact = nil;
+    IKContact * contact = nil;
     if (self.contactsArray.count > indexPath.row)
         contact = [self.contactsArray objectAtIndex:indexPath.row] ? [self.contactsArray objectAtIndex:indexPath.row] : nil;
     
@@ -51,10 +60,16 @@
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    int row = indexPath.row;
     if (indexPath.row == self.contactsArray.count)
     {
         IKCreateContactViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"createContactController"];
+        controller.contactsRepository = self.contactsRepository;
+        [self.navigationController pushViewController:controller animated:YES];
+    }else
+    {
+        IKUpdateContactViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"updateContactController"];
+        controller.contactsRepository = self.contactsRepository;        
+        controller.contactToUpdate = [self.contactsArray objectAtIndex:indexPath.row];
         [self.navigationController pushViewController:controller animated:YES];
     }
 }

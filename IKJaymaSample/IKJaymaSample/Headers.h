@@ -6,6 +6,6 @@
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IKContactDocument.h"
+#import "IKContact.h"
 #import "IKContactsRepository.h"
 #import "IJAFNetworkingBackend.h"

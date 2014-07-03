@@ -7,7 +7,7 @@
 //
 
 #import "IKContactsRepository.h"
-#import "IKContactDocument.h"
+#import "IKContact.h"
 @implementation IKContactsRepository
 -(id)initWithBackend:(IJAFNetworkingBackend *)backend
 {
@@ -21,8 +21,7 @@
 }
 -(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject
 {
-    IKContactDocument * contact = [[IKContactDocument alloc]initWithDictionary:responseObject];
+    IKContact * contact = [[IKContact alloc]initWithDictionary:responseObject];
     return contact;
 }
-
 @end
