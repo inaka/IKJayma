@@ -7,6 +7,7 @@
 //
 
 #import "IKViewController.h"
+#import "IKCreateContactViewController.h"
 #import "Headers.h"
 @interface IKViewController ()
 @property (nonatomic,strong) IJAFNetworkingBackend *contactsBackend;
@@ -32,7 +33,7 @@
 }
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.contactsArray.count;
+    return self.contactsArray.count + 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -41,10 +42,21 @@
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"EmptyCell"];
     }
-    IKContactDocument * contact = [self.contactsArray objectAtIndex:indexPath.row];
+    IKContactDocument * contact = nil;
+    if (self.contactsArray.count > indexPath.row)
+        contact = [self.contactsArray objectAtIndex:indexPath.row] ? [self.contactsArray objectAtIndex:indexPath.row] : nil;
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ : %@",contact.contactName,contact.contactEmail];
+    cell.textLabel.text = contact ? [NSString stringWithFormat:@"%@ : %@",contact.contactName,contact.contactEmail] : @"Add a new contact";
     return cell;
+}
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    int row = indexPath.row;
+    if (indexPath.row == self.contactsArray.count)
+    {
+        IKCreateContactViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"createContactController"];
+        [self.navigationController pushViewController:controller animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning
 {

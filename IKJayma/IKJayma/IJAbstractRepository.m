@@ -43,7 +43,7 @@
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
         {
-            success ([self writeDocumentWithResponseObject:responseObject]);
+            success (document);
         }
     } failure:^(NSOperation *operation, NSError *error) {
         if (failure)

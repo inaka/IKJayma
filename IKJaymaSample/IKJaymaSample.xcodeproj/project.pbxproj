@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100027D1965982800331CA6 /* IKCreateContactViewController.m */; };
 		4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
 		4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814B196441E7004E05C7 /* CoreGraphics.framework */; };
 		4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
@@ -40,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4100027C1965982800331CA6 /* IKCreateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKCreateContactViewController.h; sourceTree = "<group>"; };
+		4100027D1965982800331CA6 /* IKCreateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCreateContactViewController.m; sourceTree = "<group>"; };
 		41088146196441E7004E05C7 /* IKJaymaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41088149196441E7004E05C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4108814B196441E7004E05C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -142,6 +145,8 @@
 				4108815B196441E7004E05C7 /* Main.storyboard */,
 				4108815E196441E7004E05C7 /* IKViewController.h */,
 				4108815F196441E7004E05C7 /* IKViewController.m */,
+				4100027C1965982800331CA6 /* IKCreateContactViewController.h */,
+				4100027D1965982800331CA6 /* IKCreateContactViewController.m */,
 				41088161196441E7004E05C7 /* Images.xcassets */,
 				41088150196441E7004E05C7 /* Supporting Files */,
 				4108819019647410004E05C7 /* Headers.h */,
@@ -341,6 +346,7 @@
 				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
 				41088186196443FB004E05C7 /* IJAbstractDocument.m in Sources */,
 				4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */,
+				4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */,
 				41088156196441E7004E05C7 /* main.m in Sources */,
 				41088160196441E7004E05C7 /* IKViewController.m in Sources */,
 				41088187196443FB004E05C7 /* IJAbstractRepository.m in Sources */,
