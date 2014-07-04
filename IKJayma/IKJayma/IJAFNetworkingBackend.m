@@ -20,13 +20,19 @@
 }
 
 
-- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(NSOperation *operation, NSError *error))failure
+- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure
 {
     AFHTTPRequestOperation *operation = [self operationWithRequest:request];
     
     operation.responseSerializer = [AFJSONResponseSerializer serializer];
     
-    [operation setCompletionBlockWithSuccess:success failure:failure];
+    [operation setCompletionBlockWithSuccess:success failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        if (failure)
+        {
+            IJError * erro = [[IJError alloc]initWithResponse:operation.response responseObject:operation.responseObject andError:error];
+            failure (erro);
+        }
+    }];
 
     [self.operationsQueue addOperation:operation];
 }
