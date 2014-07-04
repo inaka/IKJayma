@@ -27,43 +27,74 @@
 {
     [self createDocument:contact success:^(IJAbstractDocument *document) {
         if (success)
+        {
             success ((IKContact *)document);
-    } failure:^(id responseObject, NSError *error) {
+        }
+    } failure:^(IJError *error) {
         if (failure)
         {
-            failure ([self responseErrorMessageFromResponseObject:responseObject andError:error]);
+            failure([self errorMessageFromError:error]);
         }
     }];
 }
 
--(void)updateContact:(IKContact *)contact success:(void (^)(IKContact * contact))success failure:(void (^)(NSString * errorMessage))failure
+-(void)updateContact:(IKContact *)contact success:(void (^)(IKContact * contact))success failure:(void (^)(NSString * messageError))failure
 {
     [self updateDocument:contact success:^(IJAbstractDocument *document) {
         if (success)
+        {
             success ((IKContact *)document);
-    } failure:^(id responseObject, NSError *error) {
+        }
+    } failure:^(IJError *error) {
         if (failure)
         {
-            failure ([self responseErrorMessageFromResponseObject:responseObject andError:error]);
+            failure([self errorMessageFromError:error]);
         }
     }];
 }
 
--(void)findAllContactsWithSuccess:(void (^)(NSArray * contacts))success failure:(void (^)(NSString * errorMessage))failure
+-(void)findAllContactsWithSuccess:(void (^)(NSArray * contacts))success failure:(void (^)(NSString * messageError))failure
 {
-    [self findAllDocumentsWithSuccess:success failure:^(id responseObject, NSError *error) {
+    [self findAllDocumentsWithSuccess:success failure:^(IJError *error) {
         if (failure)
         {
-            failure ([self responseErrorMessageFromResponseObject:responseObject andError:error]);
+            failure([self errorMessageFromError:error]);
         }
     }];
 }
 
--(NSString *)responseErrorMessageFromResponseObject:(id)responseObject andError:(NSError *)error
+-(void)findContactsWithName:(NSString *)name success:(void (^)(NSArray * contacts))success failure:(void (^)(NSString * messageError))failure
 {
-    if (responseObject[@"error"])
-        return responseObject[@"error"];
+    [self findDocumentsWithConditions:@{@"name":name} success:success failure:^(IJError *error){
+        if (failure)
+        {
+            failure([self errorMessageFromError:error]);
+        }
+    }];
+}
+-(void)deleteContact:(IKContact *)contact success:(void (^)(BOOL success))success failure:(void (^)(NSString *messageError))failure
+{
+    [self deleteDocument:contact success:success failure:^(IJError *error) {
+        if (failure)
+        {
+            failure([self errorMessageFromError:error]);
+        }
+        
+    } ];
+}
+
+-(NSString *)errorMessageFromError:(IJError *)error
+{
+    if (error.responseObject[@"error"])
+        return error.responseObject[@"error"];
     else
-        return error.localizedDescription;
+    {
+        switch (error.response.statusCode) {
+            case 409:
+                return @"Contact name is already taken!";
+            default:
+                return error.internalError.localizedDescription;
+        }
+    }
 }
 @end

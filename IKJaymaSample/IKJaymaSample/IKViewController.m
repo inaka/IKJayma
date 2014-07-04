@@ -9,6 +9,7 @@
 #import "IKViewController.h"
 #import "IKCreateContactViewController.h"
 #import "IKUpdateContactViewController.h"
+#import "IKSearchContactsViewController.h"
 #import "Headers.h"
 @interface IKViewController ()
 @property (nonatomic,strong) IJAFNetworkingBackend *contactsBackend;
@@ -22,9 +23,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"CONTACTS";
     self.contactsArray = [NSMutableArray array];
     self.contactsBackend = [[IJAFNetworkingBackend alloc]init];
     self.contactsRepository = [[IKContactsRepository alloc]initWithBackend:self.contactsBackend];
+    
+    UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
+                                                                                target:self
+                                                                                action:@selector(searchContacts:)];
+    [[self navigationItem] setRightBarButtonItem:doneButton];
+}
+-(IBAction)searchContacts:(id)sender
+{
+    
+    IKSearchContactsViewController * controller = [self.storyboard instantiateViewControllerWithIdentifier:@"searchContactsController"];
+    controller.contactsRepository = self.contactsRepository;
+    [self.navigationController pushViewController:controller animated:YES];
 }
 -(void)getContactsFromServer
 {
@@ -55,7 +69,7 @@
     if (self.contactsArray.count > indexPath.row)
         contact = [self.contactsArray objectAtIndex:indexPath.row] ? [self.contactsArray objectAtIndex:indexPath.row] : nil;
     
-    cell.textLabel.text = contact ? [NSString stringWithFormat:@"%@ : %@",contact.contactName,contact.contactEmail] : @"Add a new contact";
+    cell.textLabel.text = contact ? contact.contactName : @"Add a new contact";
     return cell;
 }
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath

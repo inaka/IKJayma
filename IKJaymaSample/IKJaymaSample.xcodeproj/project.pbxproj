@@ -12,6 +12,8 @@
 		4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002891965E8F300331CA6 /* IJAbstractDocument.m */; };
 		410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028B1965E8F300331CA6 /* IJAbstractRepository.m */; };
 		410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */; };
+		410002991966031900331CA6 /* IJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002981966031900331CA6 /* IJError.m */; };
+		4100029C1966E19A00331CA6 /* IKSearchContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */; };
 		4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
 		4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814B196441E7004E05C7 /* CoreGraphics.framework */; };
 		4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
@@ -55,6 +57,10 @@
 		4100028C1965E8F300331CA6 /* IJAFNetworkingBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAFNetworkingBackend.h; sourceTree = "<group>"; };
 		4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackend.m; sourceTree = "<group>"; };
 		4100028E1965E8F300331CA6 /* IKJayma-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKJayma-Prefix.pch"; sourceTree = "<group>"; };
+		410002971966031900331CA6 /* IJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJError.h; sourceTree = "<group>"; };
+		410002981966031900331CA6 /* IJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJError.m; sourceTree = "<group>"; };
+		4100029A1966E19A00331CA6 /* IKSearchContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSearchContactsViewController.h; sourceTree = "<group>"; };
+		4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSearchContactsViewController.m; sourceTree = "<group>"; };
 		41088146196441E7004E05C7 /* IKJaymaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41088149196441E7004E05C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4108814B196441E7004E05C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -114,6 +120,8 @@
 		410002871965E8F300331CA6 /* IKJayma */ = {
 			isa = PBXGroup;
 			children = (
+				410002971966031900331CA6 /* IJError.h */,
+				410002981966031900331CA6 /* IJError.m */,
 				410002881965E8F300331CA6 /* IJAbstractDocument.h */,
 				410002891965E8F300331CA6 /* IJAbstractDocument.m */,
 				4100028A1965E8F300331CA6 /* IJAbstractRepository.h */,
@@ -171,6 +179,8 @@
 				4108815B196441E7004E05C7 /* Main.storyboard */,
 				4108815E196441E7004E05C7 /* IKViewController.h */,
 				4108815F196441E7004E05C7 /* IKViewController.m */,
+				4100029A1966E19A00331CA6 /* IKSearchContactsViewController.h */,
+				4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */,
 				410002841965D5F300331CA6 /* IKUpdateContactViewController.h */,
 				410002851965D5F300331CA6 /* IKUpdateContactViewController.m */,
 				4100027C1965982800331CA6 /* IKCreateContactViewController.h */,
@@ -388,11 +398,13 @@
 			files = (
 				4108818C196446AD004E05C7 /* IKContact.m in Sources */,
 				410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */,
+				4100029C1966E19A00331CA6 /* IKSearchContactsViewController.m in Sources */,
 				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
 				4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */,
 				410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */,
 				4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */,
 				4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */,
+				410002991966031900331CA6 /* IJError.m in Sources */,
 				410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */,
 				41088156196441E7004E05C7 /* main.m in Sources */,
 				41088160196441E7004E05C7 /* IKViewController.m in Sources */,

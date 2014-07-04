@@ -29,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [super viewDidLoad];
+    self.title = [self.contactToUpdate.contactName uppercaseString];
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone
                                                                                 target:self
                                                                                 action:@selector(updateContact:)];
@@ -38,6 +38,17 @@
     self.textFieldName.text = self.contactToUpdate.contactName;
     self.textFieldPhone.text = self.contactToUpdate.contactPhone;
     self.textFieldEmail.text = self.contactToUpdate.contactEmail;
+}
+- (IBAction)deleteContact:(id)sender
+{
+    [self.contactsRepository deleteContact:self.contactToUpdate success:^(BOOL success) {
+        if (success)
+        {
+            [self.navigationController popViewControllerAnimated:YES];
+        }
+    } failure:^(NSString *messageError) {
+        [[[UIAlertView alloc]initWithTitle:@"ERROR" message:messageError delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show] ;
+    }];
 }
 - (IBAction)updateContact:(id)sender
 {
@@ -50,8 +61,8 @@
     
     [self.contactsRepository updateContact:self.contactToUpdate success:^(IKContact *document) {
         [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSString * errorMessage) {
-        [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show] ;
+    } failure:^(NSString *messageError) {
+        [[[UIAlertView alloc]initWithTitle:@"ERROR" message:messageError delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show] ;
     }];    
 }
 - (void)didReceiveMemoryWarning

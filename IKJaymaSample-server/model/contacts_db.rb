@@ -10,7 +10,9 @@ class ContactsDb
   end
 
   def add(contact)
-    if find({:name => contact.name}).length != 0
+    found_contacts = find({:name => contact.name})
+    same_name_contacts = found_contacts.select { |found_contact| found_contact.name == contact.name}
+    if same_name_contacts.length != 0
       raise DuplicatedContactException
     end
 
