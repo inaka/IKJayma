@@ -7,14 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IJAFNetworkingBackend.h"
+#import "IJAbstractBackend.h"
 #import "IJAbstractDocument.h"
 #import "IJError.h"
 @interface IJAbstractRepository : NSObject
 @property (nonatomic,retain) NSString * serverUrl;
 @property (nonatomic,retain) NSString * basePath;
-@property (nonatomic,retain) IJAFNetworkingBackend * backend;
--(id)initWithBackend:(IJAFNetworkingBackend *)backend;
+@property (nonatomic,retain) IJAbstractBackend * backend;
+-(id)initWithBackend:(IJAbstractBackend *)backend;
 -(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure;
 
 -(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure;

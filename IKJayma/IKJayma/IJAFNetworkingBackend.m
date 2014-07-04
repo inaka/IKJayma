@@ -10,17 +10,7 @@
 
 @implementation IJAFNetworkingBackend
 
--(id)init
-{
-    if (self = [super init])
-    {
-        self.operationsQueue = [[NSOperationQueue alloc]init];
-    }
-    return self;
-}
-
-
-- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure
+- (AFHTTPRequestOperation *)operationWithRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure
 {
     AFHTTPRequestOperation *operation = [self operationWithRequest:request];
     
@@ -34,8 +24,9 @@
         }
     }];
 
-    [self.operationsQueue addOperation:operation];
+    return operation;
 }
+
 - (AFHTTPRequestOperation *)operationWithRequest:(NSURLRequest *)request
 {
     return [[AFHTTPRequestOperation alloc] initWithRequest:request];
