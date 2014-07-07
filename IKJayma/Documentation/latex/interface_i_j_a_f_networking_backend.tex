@@ -1,0 +1,50 @@
+\hypertarget{interface_i_j_a_f_networking_backend}{\section{I\+J\+A\+F\+Networking\+Backend Class Reference}
+\label{interface_i_j_a_f_networking_backend}\index{I\+J\+A\+F\+Networking\+Backend@{I\+J\+A\+F\+Networking\+Backend}}
+}
+
+
+{\ttfamily \#import $<$I\+J\+A\+F\+Networking\+Backend.\+h$>$}
+
+Inheritance diagram for I\+J\+A\+F\+Networking\+Backend\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{interface_i_j_a_f_networking_backend}
+\end{center}
+\end{figure}
+\subsection*{Instance Methods}
+\begin{DoxyCompactItemize}
+\item 
+(void) -\/ \hyperlink{interface_i_j_a_f_networking_backend_a625df20d6ea6e780aafb7b438f66efad}{queue\+Request\+:success\+:failure\+:}
+\begin{DoxyCompactList}\small\item\em This method add a request to a queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+N\+S\+Operation\+Queue $\ast$ \hyperlink{interface_i_j_a_f_networking_backend_ac2f0b3315f3a4761b445c5a822dd84c4}{operations\+Queue}
+\end{DoxyCompactItemize}
+
+
+\subsection{Method Documentation}
+\hypertarget{interface_i_j_a_f_networking_backend_a625df20d6ea6e780aafb7b438f66efad}{\index{I\+J\+A\+F\+Networking\+Backend@{I\+J\+A\+F\+Networking\+Backend}!queue\+Request\+:success\+:failure\+:@{queue\+Request\+:success\+:failure\+:}}
+\index{queue\+Request\+:success\+:failure\+:@{queue\+Request\+:success\+:failure\+:}!I\+J\+A\+F\+Networking\+Backend@{I\+J\+A\+F\+Networking\+Backend}}
+\subsubsection[{queue\+Request\+:success\+:failure\+:}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (void) queue\+Request\+: 
+\begin{DoxyParamCaption}
+\item[{(N\+S\+U\+R\+L\+Request $\ast$)}]{request}
+\item[{success:(void($^\wedge$)(N\+S\+Operation $\ast$operation, id response\+Object))}]{success}
+\item[{failure:(void($^\wedge$)({\bf I\+J\+Error} $\ast$error))}]{failure}
+\end{DoxyParamCaption}
+}}\label{interface_i_j_a_f_networking_backend_a625df20d6ea6e780aafb7b438f66efad}
+
+
+This method add a request to a queue. 
+
+This will add a request to a queue so you can stop all operations in case you don't need them anymore. In case you need to implement a not-\/contemplated method in your repositories you'll need to send your request here. Other way you won't never use it. 
+
+\subsection{Property Documentation}
+\hypertarget{interface_i_j_a_f_networking_backend_ac2f0b3315f3a4761b445c5a822dd84c4}{\index{I\+J\+A\+F\+Networking\+Backend@{I\+J\+A\+F\+Networking\+Backend}!operations\+Queue@{operations\+Queue}}
+\index{operations\+Queue@{operations\+Queue}!I\+J\+A\+F\+Networking\+Backend@{I\+J\+A\+F\+Networking\+Backend}}
+\subsubsection[{operations\+Queue}]{\setlength{\rightskip}{0pt plus 5cm}-\/ (N\+S\+Operation\+Queue$\ast$) operations\+Queue\hspace{0.3cm}{\ttfamily [read]}, {\ttfamily [write]}, {\ttfamily [atomic]}, {\ttfamily [strong]}}}\label{interface_i_j_a_f_networking_backend_ac2f0b3315f3a4761b445c5a822dd84c4}
+The queue that handles the N\+S\+Operations 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+I\+K\+Jayma/\hyperlink{_i_j_a_f_networking_backend_8h}{I\+J\+A\+F\+Networking\+Backend.\+h}\end{DoxyCompactItemize}
