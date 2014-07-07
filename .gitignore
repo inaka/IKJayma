@@ -17,4 +17,5 @@ profile
 DerivedData
 *.hmap
 *.ipa
-
+*.orig
+Documentation
