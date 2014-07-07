@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface IJError : NSError
+/*! The NSHTTPURLResponse from the server.*/
 @property (nonatomic,strong)NSHTTPURLResponse *response;
+/*! The response object created by AFNetworking.*/
 @property (nonatomic,strong)id responseObject;
+/*! The NSError retrieved by AFNetworking.*/
 @property (nonatomic,strong)NSError *internalError;
+/*! Assign the basic properties for an IJError */
 -(id)initWithResponse:(NSHTTPURLResponse *)response responseObject:(id)responseObject andError:(NSError *)error;
 @end

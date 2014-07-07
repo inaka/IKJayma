@@ -10,6 +10,11 @@
 #import <AFNetworking/AFNetworking.h>
 #import "IJError.h"
 @interface IJAFNetworkingBackend : NSObject
+/*! The queue that handles the NSOperations */
 @property (strong) NSOperationQueue * operationsQueue;
+/*! \brief This method add a request to a queue.
+ * 
+ *  This will add a request to a queue so you can stop all operations in case you don't need them anymore. In case you need to implement a not-contemplated method in your repositories you'll need to send your request here. Other way you won't never use it.
+ */
 - (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure;
 @end
