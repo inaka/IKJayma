@@ -9,12 +9,12 @@
 #import "IJAbstractRepository.h"
 @implementation IJAbstractRepository
 
--(id)initWithBackend:(IJAFNetworkingBackend *)backend
+-(id)initWithBackend:(IJAbstractBackend *)backend
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;
 }
--(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure
+-(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPath]];
     [request setHTTPMethod:@"POST"];
@@ -26,14 +26,9 @@
         {
             success ([self writeDocumentWithResponseObject:responseObject]);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if (failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
--(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure
+-(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
     [request setHTTPMethod:@"PUT"];
@@ -43,16 +38,11 @@
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
         {
-            success ([self writeDocumentWithResponseObject:responseObject]);
+            success (document);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if (failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
--(void)deleteDocument:(IJAbstractDocument *)document success:(void (^)(BOOL successful) )success failure:(void (^)(NSError *error))failure
+-(void)deleteDocument:(IJAbstractDocument *)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
     [request setHTTPMethod:@"DELETE"];
@@ -61,14 +51,9 @@
         {
             success (YES);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if(failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
--(void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL successful) )success failure:(void (^)(NSError *error))failure
+-(void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
     [request setHTTPMethod:@"DELETE"];
@@ -77,15 +62,10 @@
         {
             success (YES);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if(failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
 
--(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(NSError *error))failure
+-(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
     [request setHTTPMethod:@"GET"];
@@ -96,15 +76,10 @@
         {
             success ([self writeDocumentWithResponseObject:responseObject]);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if (failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
 
--(void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure
+-(void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *documents) )success failure:(void (^)(IJError *error))failure
 {
     NSString * queryString = @"";
     if (searchConditions)
@@ -128,18 +103,13 @@
             }
             success (documentsArray);
         }
-    } failure:^(NSOperation *operation, NSError *error) {
-        if (failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
--(void)findAllDocumentsWithSuccess:(void (^)(NSArray *documents) )success failure:(void (^)(NSError *error))failure
+-(void)findAllDocumentsWithSuccess:(void (^)(NSArray *documents) )success failure:(void (^)(IJError *error))failure
 {
     [self findDocumentsWithConditions:nil success:success failure:failure];
 }
--(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^) (NSError *error))failure
+-(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^)(IJError *error))failure
 {
     [self findDocumentWithId:document.documentId success:^(IJAbstractDocument *documentFromServer) {
         [document refreshWithDictionary:[documentFromServer dictionaryRepresentation] ];
@@ -147,12 +117,7 @@
         {
             success (YES);
         }
-    } failure:^(NSError *error) {
-        if (failure)
-        {
-            failure (error);
-        }
-    }];
+    } failure:failure];
 }
 #pragma mark Auxiliar Methods
 -(NSString *)queryStringFromDictionary:(NSDictionary *)dictionary

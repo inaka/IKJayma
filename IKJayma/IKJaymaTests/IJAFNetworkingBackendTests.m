@@ -54,9 +54,7 @@
     [freshSut queueRequest:request success:^(NSOperation *operation, id responseObject) {
         sutSuccessResponseObject = responseObject;
         sutSuccessRequestOperation = operation;
-    } failure:^(NSOperation *operation, NSError *error) {
-        
-    } ];
+    } failure:nil];
     
     NSString * sampleResponse = @"123";
     
@@ -65,5 +63,27 @@
     operation.successBlock(nil, sampleResponse);
     
     expect(sutSuccessResponseObject).will.equal(sampleResponse);
+}
+
+- (void)test_queueRequestShouldCallFailureBlock
+{
+    IJFakeAFNetworkingBackend *freshSut = [[IJFakeAFNetworkingBackend alloc] init];
+    __block id sutFailureResponseObject = nil;
+    __block NSHTTPURLResponse * sutFailureHTTPURLResponse = nil;
+    __block NSError * sutError = nil;
+    NSURLRequest * request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:@"www.google.com.ar"]];
+    
+    [freshSut queueRequest:request success:^(NSOperation *operation, id responseObject) {
+        
+    } failure:^(IJError *error) {
+        sutFailureResponseObject = error.responseObject;
+        sutFailureHTTPURLResponse = error.response;
+        sutError = error.internalError;
+    }];
+    
+    IJFakeHTTPRequestOperation *operation = (IJFakeHTTPRequestOperation *)[freshSut lastOperation];
+    operation.failureBlock(operation, nil);
+
+    expect(sutFailureResponseObject).will.equal(operation.responseObject);
 }
 @end

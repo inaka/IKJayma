@@ -1,0 +1,8 @@
+source "http://rubygems.org"
+
+gem "goliath"
+gem "grape"
+
+group :development do
+  gem "rake"
+end

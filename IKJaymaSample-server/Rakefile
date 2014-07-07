@@ -1,0 +1,29 @@
+require 'rubygems'
+require 'bundler'
+
+begin
+  Bundler.setup(:default, :development)
+rescue Bundler::BundlerError => e
+  $stderr.puts e.message
+  $stderr.puts "Run `bundle install` to install missing gems"
+  exit e.status_code
+end
+
+require 'rake'
+
+task :default => :run
+
+task :environment do
+  ENV["RACK_ENV"] ||= 'development'
+  require File.expand_path('../config/application', __FILE__)
+end
+
+task :routes => :environment do
+  IKJayma::API.routes.each do |route|
+    p route
+  end
+end
+
+task :run => :environment do
+  system "ruby app.rb -sv"
+end

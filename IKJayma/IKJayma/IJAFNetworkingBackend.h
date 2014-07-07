@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking/AFNetworking.h>
+#import "IJError.h"
+#import "IJAbstractBackend.h"
 
-@interface IJAFNetworkingBackend : NSObject
-@property (strong) NSOperationQueue * operationsQueue;
-- (void)queueRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(NSOperation *operation, NSError *error))failure;
+@interface IJAFNetworkingBackend : IJAbstractBackend
 @end
