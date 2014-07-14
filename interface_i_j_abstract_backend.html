@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>“IKJayma”: IJError Class Reference</title>
+<title>“IKJayma”: IJAbstractBackend Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -84,58 +84,59 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-methods">Instance Methods</a> &#124;
 <a href="#properties">Properties</a> &#124;
-<a href="class_i_j_error-members.html">List of all members</a>  </div>
+<a href="class_i_j_abstract_backend-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">IJError Class Reference</div>  </div>
+<div class="title">IJAbstractBackend Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#import &lt;<a class="el" href="_i_j_error_8h_source.html">IJError.h</a>&gt;</code></p>
+<p><code>#import &lt;<a class="el" href="_i_j_abstract_backend_8h_source.html">IJAbstractBackend.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for IJError:</div>
+Inheritance diagram for IJAbstractBackend:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="interface_i_j_error.png" usemap="#IJError_map" alt=""/>
-  <map id="IJError_map" name="IJError_map">
+  <img src="interface_i_j_abstract_backend.png" usemap="#IJAbstractBackend_map" alt=""/>
+  <map id="IJAbstractBackend_map" name="IJAbstractBackend_map">
+<area href="interface_i_j_a_f_networking_backend.html" alt="IJAFNetworkingBackend" shape="rect" coords="0,112,151,136"/>
 </map>
  </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
-<tr class="memitem:a5629f8ba684d889b94903853ddeb53fa"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_j_error.html#a5629f8ba684d889b94903853ddeb53fa">initWithResponse:responseObject:andError:</a></td></tr>
-<tr class="separator:a5629f8ba684d889b94903853ddeb53fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afab21dcf7fee6d21c2d46ed4888b243d"><td class="memItemLeft" align="right" valign="top">(NSOperation *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_j_abstract_backend.html#afab21dcf7fee6d21c2d46ed4888b243d">operationWithRequest:success:failure:</a></td></tr>
+<tr class="memdesc:afab21dcf7fee6d21c2d46ed4888b243d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ABSTRACT METHOD. You'll need to write your custom implementation.  <a href="#afab21dcf7fee6d21c2d46ed4888b243d">More...</a><br /></td></tr>
+<tr class="separator:afab21dcf7fee6d21c2d46ed4888b243d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d921a09abe22936e465401ad892e3d"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_j_abstract_backend.html#a95d921a09abe22936e465401ad892e3d">queueRequest:success:failure:</a></td></tr>
+<tr class="memdesc:a95d921a09abe22936e465401ad892e3d"><td class="mdescLeft">&#160;</td><td class="mdescRight">ABSTRACT METHOD. You'll need to write your custom implementation.  <a href="#a95d921a09abe22936e465401ad892e3d">More...</a><br /></td></tr>
+<tr class="separator:a95d921a09abe22936e465401ad892e3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a44cfbf6891e5368a83d81407ac05ba4d"><td class="memItemLeft" align="right" valign="top">NSHTTPURLResponse *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_j_error.html#a44cfbf6891e5368a83d81407ac05ba4d">response</a></td></tr>
-<tr class="separator:a44cfbf6891e5368a83d81407ac05ba4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad9bbe1ee541238cfc14a42eb592260c6"><td class="memItemLeft" align="right" valign="top">id&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_j_error.html#ad9bbe1ee541238cfc14a42eb592260c6">responseObject</a></td></tr>
-<tr class="separator:ad9bbe1ee541238cfc14a42eb592260c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3ece78b392ee71d2f358312bff1bb75a"><td class="memItemLeft" align="right" valign="top">NSError *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_j_error.html#a3ece78b392ee71d2f358312bff1bb75a">internalError</a></td></tr>
-<tr class="separator:a3ece78b392ee71d2f358312bff1bb75a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee879d9a4df1f0fc3a81cbb9ecd05074"><td class="memItemLeft" align="right" valign="top">NSOperationQueue *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_j_abstract_backend.html#aee879d9a4df1f0fc3a81cbb9ecd05074">operationsQueue</a></td></tr>
+<tr class="separator:aee879d9a4df1f0fc3a81cbb9ecd05074"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Method Documentation</h2>
-<a class="anchor" id="a5629f8ba684d889b94903853ddeb53fa"></a>
+<a class="anchor" id="afab21dcf7fee6d21c2d46ed4888b243d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">- (id) initWithResponse: </td>
+          <td class="memname">- (NSOperation *) operationWithRequest: </td>
           <td></td>
-          <td class="paramtype">(NSHTTPURLResponse *)&#160;</td>
-          <td class="paramname"><em>response</em></td>
+          <td class="paramtype">(NSURLRequest *)&#160;</td>
+          <td class="paramname"><em>request</em></td>
         </tr>
         <tr>
-          <td class="paramkey">responseObject:</td>
+          <td class="paramkey">success:</td>
           <td></td>
-          <td class="paramtype">(id)&#160;</td>
-          <td class="paramname"><em>responseObject</em></td>
+          <td class="paramtype">(void(^)(NSOperation *operation, id responseObject))&#160;</td>
+          <td class="paramname"><em>success</em></td>
         </tr>
         <tr>
-          <td class="paramkey">andError:</td>
+          <td class="paramkey">failure:</td>
           <td></td>
-          <td class="paramtype">(NSError *)&#160;</td>
-          <td class="paramname"><em>error</em>&#160;</td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_i_j_error.html">IJError</a> *error))&#160;</td>
+          <td class="paramname"><em>failure</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -144,12 +145,49 @@ Properties</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Assign the basic properties for an <a class="el" href="interface_i_j_error.html">IJError</a> </p>
+
+<p>ABSTRACT METHOD. You'll need to write your custom implementation. </p>
+<p>This will create and return an NSOperation. </p>
+
+</div>
+</div>
+<a class="anchor" id="a95d921a09abe22936e465401ad892e3d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (void) queueRequest: </td>
+          <td></td>
+          <td class="paramtype">(NSURLRequest *)&#160;</td>
+          <td class="paramname"><em>request</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">success:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(NSOperation *operation, id responseObject))&#160;</td>
+          <td class="paramname"><em>success</em></td>
+        </tr>
+        <tr>
+          <td class="paramkey">failure:</td>
+          <td></td>
+          <td class="paramtype">(void(^)(<a class="el" href="interface_i_j_error.html">IJError</a> *error))&#160;</td>
+          <td class="paramname"><em>failure</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>ABSTRACT METHOD. You'll need to write your custom implementation. </p>
+<p>This will add a request to a queue so you can stop all operations in case you don't need them anymore. In case you need to implement a not-contemplated method in your repositories you'll need to send your request here. Other way you won't never use it. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
-<a class="anchor" id="a3ece78b392ee71d2f358312bff1bb75a"></a>
+<a class="anchor" id="aee879d9a4df1f0fc3a81cbb9ecd05074"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -157,63 +195,20 @@ Properties</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">- (NSError*) internalError</td>
+          <td class="memname">- (NSOperationQueue*) operationsQueue</td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">atomic</span><span class="mlabel">strong</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>The NSError retrieved by AFNetworking. </p>
-
-</div>
-</div>
-<a class="anchor" id="a44cfbf6891e5368a83d81407ac05ba4d"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (NSHTTPURLResponse*) response</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The NSHTTPURLResponse from the server. </p>
-
-</div>
-</div>
-<a class="anchor" id="ad9bbe1ee541238cfc14a42eb592260c6"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">- (id) responseObject</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span><span class="mlabel">nonatomic</span><span class="mlabel">strong</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>The response object created by AFNetworking. </p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>IKJayma/IKJayma/<a class="el" href="_i_j_error_8h_source.html">IJError.h</a></li>
+<li>IKJayma/IKJayma/<a class="el" href="_i_j_abstract_backend_8h_source.html">IJAbstractBackend.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

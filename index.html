@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>“IKJayma”: Main Page</title>
+<title>“IKJayma”: IKJayma by Inaka.</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -74,13 +74,38 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div class="header">
   <div class="headertitle">
-<div class="title">“IKJayma” Documentation</div>  </div>
+<div class="title">IKJayma by Inaka. </div>  </div>
 </div><!--header-->
 <div class="contents">
-</div><!-- contents -->
+<div class="textblock"><h1><a class="anchor" id="intro_sec"></a>
+Introduction</h1>
+<p>IKJayma was developed to ease the way we connect with the server. This will provide an easy way to create, update, delete and get entities from a server in a few lines of code.</p>
+<h1><a class="anchor" id="install_sec"></a>
+Installation</h1>
+<h2><a class="anchor" id="with_pods"></a>
+With pods</h2>
+<p>If you are using pods you should add <br />
+</p><div class="fragment"><div class="line">pod <span class="stringliteral">&#39;IKJayma&#39;</span> </div>
+</div><!-- fragment --><div class="fragment"><div class="line">pod <span class="stringliteral">&#39;AFNetworking&#39;</span> </div>
+</div><!-- fragment --><p> to your Podfile and run</p><div class="fragment"><div class="line">pod install </div>
+</div><!-- fragment --><p> in your terminal.</p>
+<h2><a class="anchor" id="without_pods"></a>
+Without pods</h2>
+<p>Clone the repository running</p><div class="fragment"><div class="line">git clone git@github.com:inaka/IKJayma.git </div>
+</div><!-- fragment --><p> in your terminal. Then add the folder IKJayma found in</p><div class="fragment"><div class="line">IKJayma/IKJayma </div>
+</div><!-- fragment --><p> to your proyect. You're gonna need to add AFNetworking too. You can found how to do this here : <a href="https://github.com/AFNetworking/AFNetworking">https://github.com/AFNetworking/AFNetworking</a></p>
+<h1><a class="anchor" id="how_to_use_it_sec"></a>
+How to use it?</h1>
+<p>You can search for the sample app inside your IKJayma cloned folder in</p><div class="fragment"><div class="line">IKJayma/IKJaymaSample </div>
+</div><!-- fragment --><p> You'll have to create a CustomRepository class that inherites from AbstractRepository. AbstractRepository methods offer basic calls such as create, update, get ( all or some ) and delete. They describes what are expected and returned. Some of them receive AbstractDocuments ( objects created from a specific entity ) and returns AbstractDocuemnts, some receive a NSString with the Document ID and returns an AbstractDocument or a BOOL. You may want either use the generic methods of AbstractRepository and cast the AbstractDocuments into your CustomDocuments or write methods in your CustomRepository that calls the generic methods, cast them inside your repository and returns CustomDocuments instead of AbstractDocuments</p>
+<h1><a class="anchor" id="how_it_works_sec"></a>
+What is behind?</h1>
+<p>IKJayma provides an <a class="el" href="interface_i_j_abstract_repository.html">IJAbstractRepository</a> class. It has generic methods that create requests from the data set in the your CustomRepository class (Server URL and Entity Path ) and send them to a request queue on the <a class="el" href="interface_i_j_abstract_backend.html">IJAbstractBackend</a>. Once there, the queue executes requests and calls the success or failure block with a response object and an <a class="el" href="interface_i_j_error.html">IJError</a> ( A custom Inaka complex error ) if it's necessary.<br />
+ IKJayma also provides <a class="el" href="interface_i_j_a_f_networking_backend.html">IJAFNetworkingBackend</a> ( that inherites from <a class="el" href="interface_i_j_abstract_backend.html">IJAbstractBackend</a> so you can implement your own backend if you want ), a backend that uses AFNetworking to do the server comunication and response management. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 7 2014 17:33:16 for “IKJayma” by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 14 2014 11:18:27 for “IKJayma” by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

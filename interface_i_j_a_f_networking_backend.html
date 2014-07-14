@@ -70,7 +70,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Files</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -81,6 +81,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="class_i_j_a_f_networking_backend-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">IJAFNetworkingBackend Class Reference</div>  </div>
 </div><!--header-->
@@ -93,15 +95,30 @@ Inheritance diagram for IJAFNetworkingBackend:</div>
  <div class="center">
   <img src="interface_i_j_a_f_networking_backend.png" usemap="#IJAFNetworkingBackend_map" alt=""/>
   <map id="IJAFNetworkingBackend_map" name="IJAFNetworkingBackend_map">
+<area href="interface_i_j_abstract_backend.html" alt="IJAbstractBackend" shape="rect" coords="0,56,151,80"/>
 </map>
  </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pub_methods_interface_i_j_abstract_backend"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_interface_i_j_abstract_backend')"><img src="closed.png" alt="-"/>&#160;Instance Methods inherited from <a class="el" href="interface_i_j_abstract_backend.html">IJAbstractBackend</a></td></tr>
+<tr class="memitem:afab21dcf7fee6d21c2d46ed4888b243d inherit pub_methods_interface_i_j_abstract_backend"><td class="memItemLeft" align="right" valign="top">(NSOperation *)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_j_abstract_backend.html#afab21dcf7fee6d21c2d46ed4888b243d">operationWithRequest:success:failure:</a></td></tr>
+<tr class="memdesc:afab21dcf7fee6d21c2d46ed4888b243d inherit pub_methods_interface_i_j_abstract_backend"><td class="mdescLeft">&#160;</td><td class="mdescRight">ABSTRACT METHOD. You'll need to write your custom implementation.  <a href="#afab21dcf7fee6d21c2d46ed4888b243d">More...</a><br /></td></tr>
+<tr class="separator:afab21dcf7fee6d21c2d46ed4888b243d inherit pub_methods_interface_i_j_abstract_backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d921a09abe22936e465401ad892e3d inherit pub_methods_interface_i_j_abstract_backend"><td class="memItemLeft" align="right" valign="top">(void)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_i_j_abstract_backend.html#a95d921a09abe22936e465401ad892e3d">queueRequest:success:failure:</a></td></tr>
+<tr class="memdesc:a95d921a09abe22936e465401ad892e3d inherit pub_methods_interface_i_j_abstract_backend"><td class="mdescLeft">&#160;</td><td class="mdescRight">ABSTRACT METHOD. You'll need to write your custom implementation.  <a href="#a95d921a09abe22936e465401ad892e3d">More...</a><br /></td></tr>
+<tr class="separator:a95d921a09abe22936e465401ad892e3d inherit pub_methods_interface_i_j_abstract_backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header properties_interface_i_j_abstract_backend"><td colspan="2" onclick="javascript:toggleInherit('properties_interface_i_j_abstract_backend')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="interface_i_j_abstract_backend.html">IJAbstractBackend</a></td></tr>
+<tr class="memitem:aee879d9a4df1f0fc3a81cbb9ecd05074 inherit properties_interface_i_j_abstract_backend"><td class="memItemLeft" align="right" valign="top">NSOperationQueue *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="interface_i_j_abstract_backend.html#aee879d9a4df1f0fc3a81cbb9ecd05074">operationsQueue</a></td></tr>
+<tr class="separator:aee879d9a4df1f0fc3a81cbb9ecd05074 inherit properties_interface_i_j_abstract_backend"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>IKJayma/IKJayma/<a class="el" href="_i_j_a_f_networking_backend_8h_source.html">IJAFNetworkingBackend.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Jul 7 2014 17:33:16 for “IKJayma” by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Jul 14 2014 11:18:27 for “IKJayma” by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
