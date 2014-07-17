@@ -29,9 +29,9 @@
 		41088173196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088171196441E7004E05C7 /* InfoPlist.strings */; };
 		4108818C196446AD004E05C7 /* IKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818B196446AD004E05C7 /* IKContact.m */; };
 		4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818E19644D83004E05C7 /* IKContactsRepository.m */; };
-		5CA0B4D9A2B94C2CB29C0D57 /* libPods-IKJaymaSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DED50138AA94BC6BE7B6862 /* libPods-IKJaymaSampleTests.a */; };
-		93BFB0DEE1A14303A7C3C071 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB817994B9243D781FDD8F1 /* libPods.a */; };
-		F784F0FECD7A4C8ABBCB11C0 /* libPods-IKJaymaSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B53C7010EFCC4DA3B23ECAE1 /* libPods-IKJaymaSample.a */; };
+		BFEE34AC19785A6C0025DB8E /* IJAbstractBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */; };
+		BFEE34AD19785A6C0025DB8E /* IJAbstractBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */; };
+		CC0E1346941945F29954D57E /* libPods-IKJaymaSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2DED50138AA94BC6BE7B6862 /* libPods-IKJaymaSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJaymaSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJaymaSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4100027C1965982800331CA6 /* IKCreateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKCreateContactViewController.h; sourceTree = "<group>"; };
 		4100027D1965982800331CA6 /* IKCreateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCreateContactViewController.m; sourceTree = "<group>"; };
 		410002841965D5F300331CA6 /* IKUpdateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKUpdateContactViewController.h; sourceTree = "<group>"; };
@@ -84,10 +84,9 @@
 		4108818D19644D83004E05C7 /* IKContactsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKContactsRepository.h; sourceTree = "<group>"; };
 		4108818E19644D83004E05C7 /* IKContactsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKContactsRepository.m; sourceTree = "<group>"; };
 		4108819019647410004E05C7 /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
-		84B182F0CA18400195F18DD5 /* Pods-IKJaymaSampleTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJaymaSampleTests.xcconfig"; path = "Pods/Pods-IKJaymaSampleTests.xcconfig"; sourceTree = "<group>"; };
-		9AB817994B9243D781FDD8F1 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B53C7010EFCC4DA3B23ECAE1 /* libPods-IKJaymaSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJaymaSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCD671396D3A459BB74B2585 /* Pods-IKJaymaSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJaymaSample.xcconfig"; path = "Pods/Pods-IKJaymaSample.xcconfig"; sourceTree = "<group>"; };
+		BFEE34AA19785A6C0025DB8E /* IJAbstractBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractBackend.h; sourceTree = "<group>"; };
+		BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractBackend.m; sourceTree = "<group>"; };
+		F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJaymaSample.xcconfig"; path = "Pods/Pods-IKJaymaSample.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +97,7 @@
 				4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */,
 				4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */,
 				4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */,
-				93BFB0DEE1A14303A7C3C071 /* libPods.a in Frameworks */,
-				F784F0FECD7A4C8ABBCB11C0 /* libPods-IKJaymaSample.a in Frameworks */,
+				CC0E1346941945F29954D57E /* libPods-IKJaymaSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +108,6 @@
 				41088169196441E7004E05C7 /* XCTest.framework in Frameworks */,
 				4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */,
 				4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */,
-				5CA0B4D9A2B94C2CB29C0D57 /* libPods-IKJaymaSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +119,8 @@
 			children = (
 				410002971966031900331CA6 /* IJError.h */,
 				410002981966031900331CA6 /* IJError.m */,
+				BFEE34AA19785A6C0025DB8E /* IJAbstractBackend.h */,
+				BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */,
 				410002881965E8F300331CA6 /* IJAbstractDocument.h */,
 				410002891965E8F300331CA6 /* IJAbstractDocument.m */,
 				4100028A1965E8F300331CA6 /* IJAbstractRepository.h */,
@@ -141,8 +140,7 @@
 				4108816E196441E7004E05C7 /* IKJaymaSampleTests */,
 				41088148196441E7004E05C7 /* Frameworks */,
 				41088147196441E7004E05C7 /* Products */,
-				FCD671396D3A459BB74B2585 /* Pods-IKJaymaSample.xcconfig */,
-				84B182F0CA18400195F18DD5 /* Pods-IKJaymaSampleTests.xcconfig */,
+				F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -162,9 +160,7 @@
 				4108814B196441E7004E05C7 /* CoreGraphics.framework */,
 				4108814D196441E7004E05C7 /* UIKit.framework */,
 				41088168196441E7004E05C7 /* XCTest.framework */,
-				9AB817994B9243D781FDD8F1 /* libPods.a */,
-				B53C7010EFCC4DA3B23ECAE1 /* libPods-IKJaymaSample.a */,
-				2DED50138AA94BC6BE7B6862 /* libPods-IKJaymaSampleTests.a */,
+				1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -238,11 +234,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41088178196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSample" */;
 			buildPhases = (
-				7F0E0DBABB0B47008D7A7C5A /* Check Pods Manifest.lock */,
+				FFB4865E08D24CEF93707E41 /* Check Pods Manifest.lock */,
 				41088142196441E7004E05C7 /* Sources */,
 				41088143196441E7004E05C7 /* Frameworks */,
 				41088144196441E7004E05C7 /* Resources */,
-				0D870137465C4701AAB3CAC8 /* Copy Pods Resources */,
+				378FD1A13EC94984911B3389 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,11 +253,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4108817B196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSampleTests" */;
 			buildPhases = (
-				DE6D298B10E04A40BEAFC10C /* Check Pods Manifest.lock */,
 				41088163196441E7004E05C7 /* Sources */,
 				41088164196441E7004E05C7 /* Frameworks */,
 				41088165196441E7004E05C7 /* Resources */,
-				BA642CDD50DF48B499D9E511 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -329,7 +323,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D870137465C4701AAB3CAC8 /* Copy Pods Resources */ = {
+		378FD1A13EC94984911B3389 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -344,37 +338,7 @@
 			shellScript = "\"${SRCROOT}/Pods/Pods-IKJaymaSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7F0E0DBABB0B47008D7A7C5A /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BA642CDD50DF48B499D9E511 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-IKJaymaSampleTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DE6D298B10E04A40BEAFC10C /* Check Pods Manifest.lock */ = {
+		FFB4865E08D24CEF93707E41 /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -400,6 +364,7 @@
 				410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */,
 				4100029C1966E19A00331CA6 /* IKSearchContactsViewController.m in Sources */,
 				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
+				BFEE34AC19785A6C0025DB8E /* IJAbstractBackend.m in Sources */,
 				4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */,
 				410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */,
 				4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */,
@@ -415,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFEE34AD19785A6C0025DB8E /* IJAbstractBackend.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,7 +496,7 @@
 		};
 		41088179196441E7004E05C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCD671396D3A459BB74B2585 /* Pods-IKJaymaSample.xcconfig */;
+			baseConfigurationReference = F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -544,7 +510,7 @@
 		};
 		4108817A196441E7004E05C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = FCD671396D3A459BB74B2585 /* Pods-IKJaymaSample.xcconfig */;
+			baseConfigurationReference = F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -558,7 +524,6 @@
 		};
 		4108817C196441E7004E05C7 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84B182F0CA18400195F18DD5 /* Pods-IKJaymaSampleTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";
@@ -582,7 +547,6 @@
 		};
 		4108817D196441E7004E05C7 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84B182F0CA18400195F18DD5 /* Pods-IKJaymaSampleTests.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";

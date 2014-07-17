@@ -7,7 +7,7 @@
 //
 
 #import "IJAbstractRepository.h"
-#import "IKContact.h"
+#import "Headers.h"
 @interface IKContactsRepository : IJAbstractRepository
 
 -(void)createContact:(IKContact *)contact success:(void (^)(IKContact * contact))success failure:(void (^)(NSString * errorMessage))failure;
