@@ -16,7 +16,7 @@
  *   This will create and return an NSOperation.
  */
 - (NSOperation *)operationWithRequest:(NSURLRequest *)request success:(void (^)(NSOperation *operation, id responseObject))success failure:(void (^)(IJError *error))failure;
-/*! \brief ABSTRACT METHOD. You'll need to write your custom implementation.
+/*! \brief Add a request to a queue.
  *
  *   This will add a request to a queue so you can stop all operations in case you don't need them anymore. In case you need to implement a not-contemplated method in your repositories you'll need to send your request here. Other way you won't never use it.
  */
