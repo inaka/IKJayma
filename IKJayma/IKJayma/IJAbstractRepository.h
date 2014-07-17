@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "IJAFNetworkingBackend.h"
+#import "IJAbstractBackend.h"
 #import "IJAbstractDocument.h"
 #import "IJError.h"
 @interface IJAbstractRepository : NSObject
@@ -16,12 +16,12 @@
 /*! The path for your custom entity.*/
 @property (nonatomic,retain) NSString * basePath;
 /*! The backend that will handle all the HTTP operations.*/
-@property (nonatomic,retain) IJAFNetworkingBackend * backend;
+@property (nonatomic,retain) IJAbstractBackend * backend;
 /*! \brief ABSTRACT METHOD. You'll need to write your custom implementation.
  *
  *   You'll need to create and set your backend, and set the server url and path for the current entity.
  */
--(id)initWithBackend:(IJAFNetworkingBackend *)backend;
+-(id)initWithBackend:(IJAbstractBackend *)backend;
 /*! \brief Create a document in the server.
  *
  *   This will do a POST call to server with the received object and retrieve an AbstractDocument.

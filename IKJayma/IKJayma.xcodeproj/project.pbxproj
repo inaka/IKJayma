@@ -23,9 +23,12 @@
 		4163F561195CA871001EDCFD /* IJAbstractRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F55D195CA871001EDCFD /* IJAbstractRepository.m */; };
 		4163F562195CA871001EDCFD /* IJAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F55F195CA871001EDCFD /* IJAFNetworkingBackend.m */; };
 		4163F568195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4163F567195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m */; };
+		419B4CB9197063ED00C89CB3 /* IJAbstractBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 419B4CB8197063ED00C89CB3 /* IJAbstractBackend.m */; };
 		41DA0CC6195DDB2E0028EDCE /* IJSampleDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DA0CC5195DDB2E0028EDCE /* IJSampleDocument.m */; };
 		41DA0CCA195DE1E10028EDCE /* IJSampleRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 41DA0CC9195DE1E10028EDCE /* IJSampleRepository.m */; };
 		450855465911433F9BB03288 /* libPods-IKJayma.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE509A0FB69444E7BFF7D2E9 /* libPods-IKJayma.a */; };
+		BFD937661967213400C1AB24 /* IJAbstractBackendTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD937651967213400C1AB24 /* IJAbstractBackendTests.m */; };
+		BFD93768196726C900C1AB24 /* IJSampleBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = BFD93767196726C900C1AB24 /* IJSampleBackend.m */; };
 		E0DDC68FC03244269DF9E927 /* libPods-IKJaymaTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E408E3BCF2141AB97975FD7 /* libPods-IKJaymaTests.a */; };
 /* End PBXBuildFile section */
 
@@ -77,12 +80,18 @@
 		4163F55F195CA871001EDCFD /* IJAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackend.m; sourceTree = "<group>"; };
 		4163F566195CB53C001EDCFD /* IJFakeHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJFakeHTTPRequestOperation.h; sourceTree = "<group>"; };
 		4163F567195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJFakeHTTPRequestOperation.m; sourceTree = "<group>"; };
+		418A084B19702D0600179A23 /* MainPage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainPage.h; sourceTree = "<group>"; };
+		419B4CB7197063ED00C89CB3 /* IJAbstractBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractBackend.h; sourceTree = "<group>"; };
+		419B4CB8197063ED00C89CB3 /* IJAbstractBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractBackend.m; sourceTree = "<group>"; };
 		41DA0CC4195DDB2E0028EDCE /* IJSampleDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJSampleDocument.h; sourceTree = "<group>"; };
 		41DA0CC5195DDB2E0028EDCE /* IJSampleDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJSampleDocument.m; sourceTree = "<group>"; };
 		41DA0CC8195DE1E10028EDCE /* IJSampleRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJSampleRepository.h; sourceTree = "<group>"; };
 		41DA0CC9195DE1E10028EDCE /* IJSampleRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJSampleRepository.m; sourceTree = "<group>"; };
 		BE509A0FB69444E7BFF7D2E9 /* libPods-IKJayma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJayma.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB0EE37ABA4CDBB4889D4C /* Pods-IKJayma.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJayma.xcconfig"; path = "Pods/Pods-IKJayma.xcconfig"; sourceTree = "<group>"; };
+		BFD937651967213400C1AB24 /* IJAbstractBackendTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractBackendTests.m; sourceTree = "<group>"; };
+		BFD93767196726C900C1AB24 /* IJSampleBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJSampleBackend.m; sourceTree = "<group>"; };
+		BFD93769196726DB00C1AB24 /* IJSampleBackend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IJSampleBackend.h; sourceTree = "<group>"; };
 		CA904B8E601A430F819C9FFD /* Pods-IKJaymaTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJaymaTests.xcconfig"; path = "Pods/Pods-IKJaymaTests.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -149,12 +158,14 @@
 			children = (
 				410002941965F87A00331CA6 /* IJError.h */,
 				410002951965F87A00331CA6 /* IJError.m */,
+				419B4CB7197063ED00C89CB3 /* IJAbstractBackend.h */,
+				419B4CB8197063ED00C89CB3 /* IJAbstractBackend.m */,
 				4163F55A195CA871001EDCFD /* IJAbstractDocument.h */,
 				4163F55B195CA871001EDCFD /* IJAbstractDocument.m */,
 				4163F55C195CA871001EDCFD /* IJAbstractRepository.h */,
 				4163F55D195CA871001EDCFD /* IJAbstractRepository.m */,
-				4163F55E195CA871001EDCFD /* IJAFNetworkingBackend.h */,
-				4163F55F195CA871001EDCFD /* IJAFNetworkingBackend.m */,
+				418A084B19702D0600179A23 /* MainPage.h */,
+				BFD9376D19672DD400C1AB24 /* Implementations */,
 				4163F52E195CA7DB001EDCFD /* Supporting Files */,
 			);
 			path = IKJayma;
@@ -176,6 +187,7 @@
 				4163F551195CA85B001EDCFD /* IJAbstractDocumentTests.m */,
 				410002921965F5A600331CA6 /* IJErrorTests.m */,
 				4163F553195CA85B001EDCFD /* IJAFNetworkingBackendTests.m */,
+				BFD937651967213400C1AB24 /* IJAbstractBackendTests.m */,
 				4163F552195CA85B001EDCFD /* IJAbstractRepositoryTests.m */,
 				4163F542195CA7DB001EDCFD /* Supporting Files */,
 			);
@@ -209,8 +221,19 @@
 				41DA0CC5195DDB2E0028EDCE /* IJSampleDocument.m */,
 				41DA0CC8195DE1E10028EDCE /* IJSampleRepository.h */,
 				41DA0CC9195DE1E10028EDCE /* IJSampleRepository.m */,
+				BFD93769196726DB00C1AB24 /* IJSampleBackend.h */,
+				BFD93767196726C900C1AB24 /* IJSampleBackend.m */,
 			);
 			name = "Sample classes";
+			sourceTree = "<group>";
+		};
+		BFD9376D19672DD400C1AB24 /* Implementations */ = {
+			isa = PBXGroup;
+			children = (
+				4163F55E195CA871001EDCFD /* IJAFNetworkingBackend.h */,
+				4163F55F195CA871001EDCFD /* IJAFNetworkingBackend.m */,
+			);
+			name = Implementations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +385,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4163F562195CA871001EDCFD /* IJAFNetworkingBackend.m in Sources */,
+				419B4CB9197063ED00C89CB3 /* IJAbstractBackend.m in Sources */,
 				410002961965F87A00331CA6 /* IJError.m in Sources */,
 				4163F561195CA871001EDCFD /* IJAbstractRepository.m in Sources */,
 				4163F560195CA871001EDCFD /* IJAbstractDocument.m in Sources */,
@@ -377,7 +401,9 @@
 				41DA0CC6195DDB2E0028EDCE /* IJSampleDocument.m in Sources */,
 				4163F558195CA85B001EDCFD /* IJAFNetworkingBackendTests.m in Sources */,
 				4163F568195CB53C001EDCFD /* IJFakeHTTPRequestOperation.m in Sources */,
+				BFD93768196726C900C1AB24 /* IJSampleBackend.m in Sources */,
 				4163F557195CA85B001EDCFD /* IJAbstractRepositoryTests.m in Sources */,
+				BFD937661967213400C1AB24 /* IJAbstractBackendTests.m in Sources */,
 				41DA0CCA195DE1E10028EDCE /* IJSampleRepository.m in Sources */,
 				4163F556195CA85B001EDCFD /* IJAbstractDocumentTests.m in Sources */,
 			);

@@ -9,7 +9,7 @@
 #import "IJAbstractRepository.h"
 @implementation IJAbstractRepository
 
--(id)initWithBackend:(IJAFNetworkingBackend *)backend
+-(id)initWithBackend:(IJAbstractBackend *)backend
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;

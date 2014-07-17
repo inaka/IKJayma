@@ -9,7 +9,7 @@
 #import "IJSampleRepository.h"
 #import "IJSampleDocument.h"
 @implementation IJSampleRepository
-- (id)initWithBackend:(IJAFNetworkingBackend *)backend
+- (id)initWithBackend:(IJAbstractBackend *)backend
 {
     if (self = [super init])
     {
