@@ -10,6 +10,8 @@
 #import "IJAbstractBackend.h"
 #import "IJAbstractDocument.h"
 #import "IJError.h"
+#import "IJDocumentProtocol.h"
+
 @interface IJAbstractRepository : NSObject
 /*! The server url.*/
 @property (nonatomic,retain) NSString * serverUrl;
@@ -26,17 +28,17 @@
  *
  *   This will do a POST call to server with the received object and retrieve an AbstractDocument.
  */
--(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure;
+-(void)createDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure;
 /*! \brief Update a document in the server.
  *
  *   This will do a PUT call to server with the received object and retrieve the updated AbstractDocument.
  */
--(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure;
+-(void)updateDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure;
 /*! \brief Delete a document in the server.
  *
  *   This will do a DELETE call to server with the received object and returns a BOOL.
  */
--(void)deleteDocument:(IJAbstractDocument *)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure;
+-(void)deleteDocument:(id<IJDocumentProtocol>)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure;
 /*! \brief Delete a document in the server.
  *
  *   This will do a DELETE call to server with the received object ID and returns a BOOL.
@@ -46,7 +48,7 @@
  *
  *   This will do a GET call to server with the received object ID and returns an AbstractDocument.
  */
--(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure;
+-(void)findDocumentWithId:(NSString *)documentId success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure;
 /*! \brief Find a list of documents in the server.
  *
  *   This will do a GET call to server with the received search conditions and returns an array filled with AbstractDocuments.
@@ -61,10 +63,10 @@
  *
  *   This will do a GET call to server with the received Abstractdocument reference and update it.
  */
--(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^)(IJError *error))failure;
+-(void)refreshDocument:(id<IJDocumentProtocol>)document success:(void (^) (BOOL success))success failure:(void (^)(IJError *error))failure;
 /*! \brief ABSTRACT METHOD. You'll need to write your custom implementation.
  *
  *  You'll need to init your custom AbstractDocument initWithDictionary method to write your custom entity.
  */
--(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject;
+-(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject;
 @end

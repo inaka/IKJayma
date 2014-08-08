@@ -19,7 +19,7 @@
     }
     return self;
 }
--(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject
+-(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject
 {
     IJSampleDocument * document = [[IJSampleDocument alloc]initWithDictionary:responseObject];
     return document;

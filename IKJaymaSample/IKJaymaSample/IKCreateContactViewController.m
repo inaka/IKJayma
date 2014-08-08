@@ -44,11 +44,21 @@
                                          ,@"email" : self.textFieldEmail.text
                                          ,@"phone" : self.textFieldPhone.text};
     IKContact * contact = [[IKContact alloc] initWithDictionary:contactDictionary];
-    [self.contactsRepository createContact:contact success:^(IKContact *contact) {
-        [self.navigationController popViewControllerAnimated:YES];
-    } failure:^(NSString *errorMessage) {
-                [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show];
-    } ];
+//    [self.contactsRepository createContact:contact success:^(IKContact *contact) {
+//        [self.navigationController popViewControllerAnimated:YES];
+//    } failure:^(NSString *errorMessage) {
+//                [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show];
+//    } ];
+	
+	[self.contactsRepository createDocument:contact success:^(IJAbstractDocument *document) {
+		[self.navigationController popViewControllerAnimated:YES];
+	} failure:^(IJError *error) {
+		[[[UIAlertView alloc]initWithTitle:@"ERROR"
+								   message:error.localizedDescription
+								  delegate:nil
+						 cancelButtonTitle:@"OK"
+						 otherButtonTitles: nil] show];
+	}];
 }
 
 - (void)didReceiveMemoryWarning

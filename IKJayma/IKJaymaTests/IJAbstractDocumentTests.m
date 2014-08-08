@@ -7,6 +7,7 @@
 
 // Class under test
 #import "IJSampleDocument.h"
+#import "IJDocumentProtocol.h"
 
 // Collaborators
 
@@ -36,7 +37,7 @@
 
 -(void)test_initWithDictionaryShouldWork
 {
-    expect(sut).to.beKindOf([IJAbstractDocument class]);
+	expect(sut).to.conformTo(@protocol(IJDocumentProtocol));
 }
 -(void)test_dictionaryRepresentationShouldReturnProperDictionary
 {

@@ -9,7 +9,7 @@
 #import "AFHTTPRequestOperation.h"
 
 @interface IJFakeHTTPRequestOperation : AFHTTPRequestOperation
-@property (nonatomic,strong)id responseObject;
+@property (nonatomic,strong) id responseObject;
 @property (copy, nonatomic) void (^successBlock)(AFHTTPRequestOperation *operation, id responseObject);
 @property (copy, nonatomic) void (^failureBlock)(AFHTTPRequestOperation *operation, NSError *error);
 @end
