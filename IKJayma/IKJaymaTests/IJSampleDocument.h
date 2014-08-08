@@ -7,6 +7,7 @@
 //
 
 #import "IJAbstractDocument.h"
+#import "IJDocumentProtocol.h"
 
-@interface IJSampleDocument : IJAbstractDocument
+@interface IJSampleDocument : NSObject<IJDocumentProtocol>
 @end

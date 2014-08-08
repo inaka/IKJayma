@@ -87,6 +87,7 @@
 		41DA0CC5195DDB2E0028EDCE /* IJSampleDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJSampleDocument.m; sourceTree = "<group>"; };
 		41DA0CC8195DE1E10028EDCE /* IJSampleRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJSampleRepository.h; sourceTree = "<group>"; };
 		41DA0CC9195DE1E10028EDCE /* IJSampleRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJSampleRepository.m; sourceTree = "<group>"; };
+		810F26D119950AF400AE7B82 /* IJDocumentProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJDocumentProtocol.h; sourceTree = "<group>"; };
 		BE509A0FB69444E7BFF7D2E9 /* libPods-IKJayma.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJayma.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEFB0EE37ABA4CDBB4889D4C /* Pods-IKJayma.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJayma.xcconfig"; path = "Pods/Pods-IKJayma.xcconfig"; sourceTree = "<group>"; };
 		BFD937651967213400C1AB24 /* IJAbstractBackendTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractBackendTests.m; sourceTree = "<group>"; };
@@ -164,6 +165,7 @@
 				4163F55B195CA871001EDCFD /* IJAbstractDocument.m */,
 				4163F55C195CA871001EDCFD /* IJAbstractRepository.h */,
 				4163F55D195CA871001EDCFD /* IJAbstractRepository.m */,
+				810F26D119950AF400AE7B82 /* IJDocumentProtocol.h */,
 				418A084B19702D0600179A23 /* MainPage.h */,
 				BFD9376D19672DD400C1AB24 /* Implementations */,
 				4163F52E195CA7DB001EDCFD /* Supporting Files */,

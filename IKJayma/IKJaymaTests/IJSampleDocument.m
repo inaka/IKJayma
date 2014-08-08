@@ -15,6 +15,8 @@
 @property (nonatomic,retain)NSDictionary * dictionary;
 @end
 @implementation IJSampleDocument
+@synthesize documentId;
+
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     if ( self = [super init])

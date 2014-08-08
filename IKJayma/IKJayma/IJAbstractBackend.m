@@ -9,6 +9,7 @@
 #import "IJAbstractBackend.h"
 
 @implementation IJAbstractBackend
+
 - (id) init
 {
     if (self = [super init])
