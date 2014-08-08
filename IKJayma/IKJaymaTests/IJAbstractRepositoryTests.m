@@ -80,7 +80,7 @@
 {
     __block IJAbstractDocument * documentFromServer = nil;
     
-    [sut createDocument:sampleDocument success:^(IJAbstractDocument *document) {
+    [sut createDocument:sampleDocument success:^(id<IJDocumentProtocol>document) {
         documentFromServer = document;
     } failure:nil];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
@@ -137,7 +137,7 @@
 {
     __block IJAbstractDocument * documentFromServer = nil;
     
-    [sut updateDocument:sampleDocumentWithId success:^(IJAbstractDocument *document) {
+    [sut updateDocument:sampleDocumentWithId success:^(id<IJDocumentProtocol>document) {
         documentFromServer = document;
     } failure:nil];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
@@ -291,7 +291,7 @@
 {
     __block IJAbstractDocument * documentFromServer = nil;
     
-    [sut findDocumentWithId:sampleDocumentWithId.documentId success:^(IJAbstractDocument *document) {
+    [sut findDocumentWithId:sampleDocumentWithId.documentId success:^(id<IJDocumentProtocol>document) {
         documentFromServer = document;
     } failure:nil];
     IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];

@@ -14,7 +14,8 @@
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;
 }
--(void)createDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
+
+-(void)createDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPath]];
     [request setHTTPMethod:@"POST"];
@@ -28,7 +29,8 @@
         }
     } failure:failure];
 }
--(void)updateDocument:(IJAbstractDocument *)document success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
+
+-(void)updateDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
     [request setHTTPMethod:@"PUT"];
@@ -42,7 +44,8 @@
         }
     } failure:failure];
 }
--(void)deleteDocument:(IJAbstractDocument *)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
+
+-(void)deleteDocument:(id<IJDocumentProtocol>)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
     [request setHTTPMethod:@"DELETE"];
@@ -53,6 +56,7 @@
         }
     } failure:failure];
 }
+
 -(void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
@@ -65,7 +69,7 @@
     } failure:failure];
 }
 
--(void)findDocumentWithId:(NSString *)documentId success:(void (^)(IJAbstractDocument *document) )success failure:(void (^)(IJError *error))failure
+-(void)findDocumentWithId:(NSString *)documentId success:(void (^)(id<IJDocumentProtocol>document))success failure:(void (^)(IJError *error))failure
 {
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
     [request setHTTPMethod:@"GET"];
@@ -89,8 +93,6 @@
     NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndQueryString:queryString]];
     [request setHTTPMethod:@"GET"];
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
-
-
     
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
@@ -105,13 +107,15 @@
         }
     } failure:failure];
 }
+
 -(void)findAllDocumentsWithSuccess:(void (^)(NSArray *documents) )success failure:(void (^)(IJError *error))failure
 {
     [self findDocumentsWithConditions:nil success:success failure:failure];
 }
--(void)refreshDocument:(IJAbstractDocument *)document success:(void (^) (BOOL success))success failure:(void (^)(IJError *error))failure
+
+-(void)refreshDocument:(id<IJDocumentProtocol>)document success:(void (^) (BOOL success))success failure:(void (^)(IJError *error))failure
 {
-    [self findDocumentWithId:document.documentId success:^(IJAbstractDocument *documentFromServer) {
+    [self findDocumentWithId:document.documentId success:^(id<IJDocumentProtocol>documentFromServer) {
         [document refreshWithDictionary:[documentFromServer dictionaryRepresentation] ];
         if (success)
         {
@@ -119,6 +123,7 @@
         }
     } failure:failure];
 }
+
 #pragma mark Auxiliar Methods
 -(NSString *)queryStringFromDictionary:(NSDictionary *)dictionary
 {
@@ -130,24 +135,29 @@
     }
     return [parametersArray componentsJoinedByString:@"&"];
 }
--(IJAbstractDocument *)writeDocumentWithResponseObject:(NSDictionary *)responseObject
+
+-(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;
 }
+
 -(NSURL *)serverUrlWithPath
 {
     NSURL * serverUrlWithPath = [NSURL URLWithString:[NSString stringWithFormat: @"%@/%@",self.serverUrl,self.basePath]];
     return serverUrlWithPath;
 }
+
 -(NSURL *)serverUrlWithPathAndDocumentID:(NSString *)documentId
 {
     NSURL * serverUrlWithPathAndDocumentID = [NSURL URLWithString:[NSString stringWithFormat: @"%@/%@/%@",self.serverUrl,self.basePath,documentId]];
     return serverUrlWithPathAndDocumentID;
 }
+
 -(NSURL *)serverUrlWithPathAndQueryString:(NSString *)queryString
 {
     NSURL * serverUrlWithPathAndQueryString = [NSURL URLWithString:[NSString stringWithFormat: @"%@/%@?%@",self.serverUrl,self.basePath,queryString]];
     return serverUrlWithPathAndQueryString;
 }
+
 @end

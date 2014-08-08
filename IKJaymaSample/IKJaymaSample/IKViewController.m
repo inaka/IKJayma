@@ -25,8 +25,8 @@
     [super viewDidLoad];
     self.title = @"CONTACTS";
     self.contactsArray = [NSMutableArray array];
-    self.contactsBackend = [[IJAFNetworkingBackend alloc]init];
-    self.contactsRepository = [[IKContactsRepository alloc]initWithBackend:self.contactsBackend];
+    IJAFNetworkingBackend *contactsBackend = [[IJAFNetworkingBackend alloc] init];
+    self.contactsRepository = [[IKContactsRepository alloc]initWithBackend:contactsBackend];
     
     UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSearch
                                                                                 target:self

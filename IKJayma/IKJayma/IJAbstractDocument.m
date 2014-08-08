@@ -9,6 +9,7 @@
 #import "IJAbstractDocument.h"
 
 @implementation IJAbstractDocument
+
 -(id)initWithDictionary:(NSDictionary *)dictionary
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");

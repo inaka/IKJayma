@@ -9,6 +9,7 @@
 #import "IJError.h"
 
 @implementation IJError
+
 -(id)initWithResponse:(NSHTTPURLResponse *)response responseObject:(id)responseObject andError:(NSError *)error
 {
     if (self = [super init])

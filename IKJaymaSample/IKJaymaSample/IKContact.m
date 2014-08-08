@@ -9,37 +9,31 @@
 #import "IKContact.h"
 
 @implementation IKContact
--(id)initWithDictionary:(NSDictionary *)dictionary
-{
-    if (self = [super init])
-    {
-        self.documentId = dictionary[@"id"] ? dictionary[@"id"] : @"";
+
+-(id)initWithDictionary:(NSDictionary *)dictionary {
+	self = [super init];
+	
+    if (self) {
+		if(dictionary[@"id"]) self.documentId = dictionary[@"id"];
         [self refreshWithDictionary:dictionary];
     }
     return self;
 }
--(NSDictionary *)dictionaryRepresentation
-{
+
+-(NSDictionary *)dictionaryRepresentation {
     
     NSMutableDictionary * dictionary = [NSMutableDictionary dictionary];
-    if (self.documentId && ![self.documentId isEqualToString:@""])
-        [dictionary setObject:self.documentId forKey:@"id"];
-    
-    if (self.contactName && ![self.contactName isEqualToString:@""])
-        [dictionary setObject:self.contactName forKey:@"name"];
-    
-    if (self.contactPhone && ![self.contactPhone isEqualToString:@""])
-        [dictionary setObject:self.contactPhone forKey:@"phone"];
-    
-    if (self.contactEmail && ![self.contactEmail isEqualToString:@""])
-        [dictionary setObject:self.contactEmail forKey:@"email"];
+	if(self.documentId && self.documentId.length > 0) dictionary[@"id"] = self.documentId;
+	if(self.contactName && self.contactName.length > 0) dictionary[@"name"] = self.contactName;
+	if(self.contactEmail && self.contactEmail.length > 0) dictionary[@"email"] = self.contactEmail;
+	if(self.contactPhone && self.contactPhone.length > 0) dictionary[@"phone"] = self.contactPhone;
     
     return dictionary;
 }
--(void)refreshWithDictionary:(NSDictionary *)dictionary
-{
-    self.contactName = dictionary[@"name"] ? dictionary[@"name"] : @"";
-    self.contactPhone = dictionary[@"phone"] ? dictionary[@"phone"] : @"";
-    self.contactEmail = dictionary[@"email"] ? dictionary[@"email"] : @"";
+
+-(void)refreshWithDictionary:(NSDictionary *)dictionary {
+	if(dictionary[@"name"]) self.contactName = dictionary[@"name"];
+	if(dictionary[@"email"]) self.contactEmail = dictionary[@"email"];
+	if(dictionary[@"phone"]) self.contactPhone = dictionary[@"phone"];
 }
 @end
