@@ -15,7 +15,7 @@
 #import "IJFakeAFNetworkingBackend.h"
 #import "IJSampleDocument.h"
 #import "IJSampleAuthenticatedRepository.h"
-#import "IKAbstractAuthenticatedRepository.h"
+#import "IJAbstractAuthenticatedRepository.h"
 
 @interface IKAbstractAuthenticatedRepositoryTests : XCTestCase
 @property (nonatomic, strong) IJSampleAuthenticatedRepository * sut;

@@ -8,7 +8,9 @@
 
 #import "IJAbstractRepository.h"
 
-@interface IKAbstractAuthenticatedRepository : IJAbstractRepository
+@interface IJAbstractAuthenticatedRepository : IJAbstractRepository
 @property (nonatomic, strong) NSString *authenticationString;
 @property (nonatomic) BOOL useAuthentication;
+
+- (NSMutableURLRequest *)requestWithUrl:(NSURL *)url httpMethod:(NSString *)method;
 @end
