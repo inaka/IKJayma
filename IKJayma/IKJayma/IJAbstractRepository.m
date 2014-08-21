@@ -139,6 +139,7 @@
 	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
 	request.HTTPMethod = method;
 	[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+	[request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
 	
 	return request;
 }

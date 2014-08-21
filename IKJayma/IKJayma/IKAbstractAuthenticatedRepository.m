@@ -19,8 +19,7 @@
 }
 
 - (void)createDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol>))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -29,8 +28,7 @@
 }
 
 - (void)updateDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol>))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -38,8 +36,7 @@
 }
 
 - (void)deleteDocument:(id<IJDocumentProtocol>)document success:(void (^)(BOOL))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -47,8 +44,7 @@
 }
 
 - (void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -56,8 +52,7 @@
 }
 
 - (void)findDocumentWithId:(NSString *)documentId success:(void (^)(id<IJDocumentProtocol>))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -65,8 +60,7 @@
 }
 
 - (void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -74,8 +68,7 @@
 }
 
 - (void)findAllDocumentsWithSuccess:(void (^)(NSArray *))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
@@ -83,8 +76,7 @@
 }
 
 - (void)refreshDocument:(id<IJDocumentProtocol>)document success:(void (^)(BOOL))success failure:(void (^)(IJError *))failure {
-	BOOL useAuth = [self checkAuthentication];
-	if(!useAuth) {
+	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
 		return;
 	}
