@@ -46,7 +46,11 @@
 	self.sut.useAuthentication = NO;
 	[self.sut createDocument:self.sampleDocument success:nil failure:nil];
     NSURLRequest * lastRequest = [self.fakeBackend lastOperation].request;
-    expect([NSJSONSerialization JSONObjectWithData:lastRequest.HTTPBody options:NSJSONReadingMutableLeaves error:NULL ]).to.equal([self.sampleDocument dictionaryRepresentation]);
+	
+	NSDictionary *expectedDictionary = [NSJSONSerialization JSONObjectWithData:lastRequest.HTTPBody options:NSJSONReadingMutableLeaves error:NULL];
+	NSDictionary *obtainedDictionary = [self.sampleDocument dictionaryRepresentation];
+	
+	expect(obtainedDictionary).to.equal(expectedDictionary);
 	
 	NSDictionary *headers = [lastRequest allHTTPHeaderFields];
 	expect([headers allKeys]).notTo.contain(@"Authorization");
@@ -57,7 +61,11 @@
 	self.sut.authenticationString = @"This is a test auth string";
 	[self.sut createDocument:self.sampleDocument success:nil failure:nil];
     NSURLRequest * lastRequest = [self.fakeBackend lastOperation].request;
-    expect([NSJSONSerialization JSONObjectWithData:lastRequest.HTTPBody options:NSJSONReadingMutableLeaves error:NULL ]).to.equal([self.sampleDocument dictionaryRepresentation]);
+    
+	NSDictionary *expectedDictionary = [NSJSONSerialization JSONObjectWithData:lastRequest.HTTPBody options:NSJSONReadingMutableLeaves error:NULL];
+	NSDictionary *obtainedDictionary = [self.sampleDocument dictionaryRepresentation];
+	
+	expect(obtainedDictionary).to.equal(expectedDictionary);
 	
 	NSDictionary *headers = [lastRequest allHTTPHeaderFields];
 	expect([headers allKeys]).contain(@"Authorization");
