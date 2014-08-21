@@ -1,28 +1,28 @@
 //
-//  IJSampleRepository.m
+//  IJSampleAuthenticatedRepository.m
 //  IKJayma
 //
-//  Created by Gera on 6/27/14.
+//  Created by Tom Ryan on 8/21/14.
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IJSampleRepository.h"
+#import "IJSampleAuthenticatedRepository.h"
 #import "IJSampleDocument.h"
 
-@implementation IJSampleRepository
-- (id)initWithBackend:(IJAbstractBackend *)backend
-{
-    if (self = [super init])
-    {
+@implementation IJSampleAuthenticatedRepository
+
+- (id)initWithBackend:(IJAbstractBackend *)backend {
+	self = [super init];
+    if (self) {
         self.backend = backend;
         self.serverUrl = @"http://sample.com";
         self.basePath = @"samples";
     }
     return self;
 }
--(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject
-{
+-(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject {
     IJSampleDocument * document = [[IJSampleDocument alloc]initWithDictionary:responseObject];
     return document;
 }
+
 @end
