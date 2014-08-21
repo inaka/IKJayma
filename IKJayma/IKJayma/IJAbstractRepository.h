@@ -69,4 +69,8 @@
  *  You'll need to init your custom AbstractDocument initWithDictionary method to write your custom entity.
  */
 -(id<IJDocumentProtocol>)writeDocumentWithResponseObject:(NSDictionary *)responseObject;
+/*! \brief Convenience method to create a mutable URL Request
+ *
+ */
+- (NSMutableURLRequest *)requestWithUrl:(NSURL *)url httpMethod:(NSString *)method;
 @end

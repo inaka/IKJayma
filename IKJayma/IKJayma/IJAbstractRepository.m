@@ -17,10 +17,9 @@
 
 -(void)createDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure
 {
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPath]];
-    [request setHTTPMethod:@"POST"];
+	NSMutableURLRequest *request = [self requestWithUrl:[self serverUrlWithPath] httpMethod:@"POST"];
+
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:[document dictionaryRepresentation] options:NSJSONWritingPrettyPrinted error:NULL]];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
    
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
@@ -32,10 +31,9 @@
 
 -(void)updateDocument:(id<IJDocumentProtocol>)document success:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure
 {
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
-    [request setHTTPMethod:@"PUT"];
+	NSMutableURLRequest *request = [self requestWithUrl:[self serverUrlWithPathAndDocumentID:document.documentId] httpMethod:@"PUT"];
+
     [request setHTTPBody:[NSJSONSerialization dataWithJSONObject:[document dictionaryRepresentation] options:NSJSONWritingPrettyPrinted error:NULL]];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
@@ -47,8 +45,8 @@
 
 -(void)deleteDocument:(id<IJDocumentProtocol>)document success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:document.documentId]];
-    [request setHTTPMethod:@"DELETE"];
+	NSMutableURLRequest *request = [self requestWithUrl:[self serverUrlWithPathAndDocumentID:document.documentId] httpMethod:@"DELETE"];
+	
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
         {
@@ -59,8 +57,7 @@
 
 -(void)deleteDocumentWithId:(NSString *)documentId success:(void (^)(BOOL successful) )success failure:(void (^)(IJError *error))failure
 {
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
-    [request setHTTPMethod:@"DELETE"];
+	NSMutableURLRequest *request = [self requestWithUrl:[self serverUrlWithPathAndDocumentID:documentId] httpMethod:@"DELETE"];
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
         {
@@ -71,9 +68,7 @@
 
 -(void)findDocumentWithId:(NSString *)documentId success:(void (^)(id<IJDocumentProtocol>document))success failure:(void (^)(IJError *error))failure
 {
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndDocumentID:documentId]];
-    [request setHTTPMethod:@"GET"];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    NSMutableURLRequest * request = [self requestWithUrl:[self serverUrlWithPathAndDocumentID:documentId] httpMethod:@"GET"];
     
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
@@ -90,9 +85,7 @@
     {
         queryString = [self queryStringFromDictionary:searchConditions];
     }
-    NSMutableURLRequest * request = [NSMutableURLRequest requestWithURL:[self serverUrlWithPathAndQueryString:queryString]];
-    [request setHTTPMethod:@"GET"];
-    [request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    NSMutableURLRequest * request = [self requestWithUrl:[self serverUrlWithPathAndQueryString:queryString] httpMethod:@"GET"];
     
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
@@ -142,6 +135,14 @@
     return nil;
 }
 
+- (NSMutableURLRequest *)requestWithUrl:(NSURL *)url httpMethod:(NSString *)method {
+	NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+	request.HTTPMethod = method;
+	[request addValue:@"application/json" forHTTPHeaderField:@"Accept"];
+	
+	return request;
+}
+
 -(NSURL *)serverUrlWithPath
 {
     NSURL * serverUrlWithPath = [NSURL URLWithString:[NSString stringWithFormat: @"%@/%@",self.serverUrl,self.basePath]];
@@ -154,8 +155,7 @@
     return serverUrlWithPathAndDocumentID;
 }
 
--(NSURL *)serverUrlWithPathAndQueryString:(NSString *)queryString
-{
+-(NSURL *)serverUrlWithPathAndQueryString:(NSString *)queryString {
     NSURL * serverUrlWithPathAndQueryString = [NSURL URLWithString:[NSString stringWithFormat: @"%@/%@?%@",self.serverUrl,self.basePath,queryString]];
     return serverUrlWithPathAndQueryString;
 }

@@ -73,7 +73,7 @@
 {
     [sut createDocument:sampleDocument success:nil failure:nil];
     NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
-    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(@"application/json");
+    expect([lastRequest.allHTTPHeaderFields objectForKey:@"Accept"]).to.equal(@"application/json");
 }
 
 -(void)test_createDocumentShouldCallSuccessWithObjectWithId
@@ -130,7 +130,7 @@
 {
     [sut updateDocument:sampleDocumentWithId success:nil failure:nil];
     NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
-    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(@"application/json");
+    expect([lastRequest.allHTTPHeaderFields objectForKey:@"Accept"]).to.equal(@"application/json");
 }
 
 -(void)test_updateDocumentShouldCallSuccessWithObjectWithId
