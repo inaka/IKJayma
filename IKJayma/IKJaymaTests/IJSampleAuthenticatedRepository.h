@@ -6,8 +6,8 @@
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IKAbstractAuthenticatedRepository.h"
+#import "IJAbstractAuthenticatedRepository.h"
 
-@interface IJSampleAuthenticatedRepository : IKAbstractAuthenticatedRepository
+@interface IJSampleAuthenticatedRepository : IJAbstractAuthenticatedRepository
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Inaka Labs S.A. All rights reserved.
 //
 
-#import "IKAbstractAuthenticatedRepository.h"
+#import "IJAbstractAuthenticatedRepository.h"
 
-@implementation IKAbstractAuthenticatedRepository
+@implementation IJAbstractAuthenticatedRepository
 
 - (instancetype)initWithBackend:(IJAbstractBackend *)backend {
 	self = [super initWithBackend:backend];
