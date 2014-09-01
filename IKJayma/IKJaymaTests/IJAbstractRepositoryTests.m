@@ -183,6 +183,13 @@
     expect(lastRequest.HTTPBody).to.equal(nil);
 }
 
+-(void)test_deleteShouldReturnContentType
+{
+    [sut deleteDocument:sampleDocumentWithId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(@"application/json");
+}
+
 -(void)test_deleteDocumentShouldCallSuccessWithObject
 {
     __block BOOL successfulFromServer;
@@ -225,6 +232,13 @@
     [sut deleteDocumentWithId:sampleDocumentWithId.documentId success:nil failure:nil];
     NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
     expect(lastRequest.HTTPBody).to.equal(nil);
+}
+
+-(void)test_deleteDocumentWithIdShouldReturnContentType
+{
+    [sut deleteDocumentWithId:sampleDocumentWithId.documentId success:nil failure:nil];
+    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
+    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(@"application/json");
 }
 
 -(void)test_deleteDocumentWithIdShouldCallSuccessWithObjectWithId

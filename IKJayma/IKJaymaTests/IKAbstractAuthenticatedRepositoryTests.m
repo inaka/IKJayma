@@ -71,4 +71,10 @@
 	expect([headers allKeys]).contain(@"Authorization");
 }
 
+-(void)test_findDocumentWithIdShouldPointToCorrectURL {
+	[self.sut findDefaultAuthenticatedDocumentWithSuccess:nil failure:nil];
+    NSURLRequest * lastRequest = [self.fakeBackend lastOperation].request;
+    expect(lastRequest.URL.absoluteString).to.equal(@"http://sample.com/samples/");
+}
+
 @end
