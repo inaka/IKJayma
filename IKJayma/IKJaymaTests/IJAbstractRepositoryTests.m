@@ -182,12 +182,7 @@
     NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
     expect(lastRequest.HTTPBody).to.equal(nil);
 }
--(void)test_deleteShouldReturnNoContentType
-{
-    [sut deleteDocument:sampleDocumentWithId success:nil failure:nil];
-    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
-    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(nil);
-}
+
 -(void)test_deleteDocumentShouldCallSuccessWithObject
 {
     __block BOOL successfulFromServer;
@@ -231,12 +226,7 @@
     NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
     expect(lastRequest.HTTPBody).to.equal(nil);
 }
--(void)test_deleteDocumentWithIdShouldReturnNoContentType
-{
-    [sut deleteDocumentWithId:sampleDocumentWithId.documentId success:nil failure:nil];
-    NSURLRequest * lastRequest = [fakeBackend lastOperation].request;
-    expect([lastRequest.allHTTPHeaderFields objectForKey:@"content-type"]).to.equal(nil);
-}
+
 -(void)test_deleteDocumentWithIdShouldCallSuccessWithObjectWithId
 {
     __block BOOL successfulFromServer;

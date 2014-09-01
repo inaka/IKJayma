@@ -12,5 +12,7 @@
 @property (nonatomic, strong) NSString *authenticationString;
 @property (nonatomic) BOOL useAuthentication;
 
+- (void)findDefaultAuthenticatedDocumentWithSuccess:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure;
+
 - (NSMutableURLRequest *)requestWithUrl:(NSURL *)url httpMethod:(NSString *)method;
 @end
