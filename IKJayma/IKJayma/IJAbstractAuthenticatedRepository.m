@@ -51,6 +51,14 @@
 	[super deleteDocumentWithId:documentId success:success failure:failure];
 }
 
+- (void)findDefaultAuthenticatedDocumentWithSuccess:(void (^)(id<IJDocumentProtocol> document) )success failure:(void (^)(IJError *error))failure {
+	if(![self checkAuthentication]) {
+		NSAssert(NO, @"You must provide an authentication string!");
+		return;
+	}
+	[super findDocumentWithId:@"" success:success failure:failure];
+}
+
 - (void)findDocumentWithId:(NSString *)documentId success:(void (^)(id<IJDocumentProtocol>))success failure:(void (^)(IJError *))failure {
 	if(![self checkAuthentication]) {
 		NSAssert(NO, @"You must provide an authentication string!");
@@ -58,6 +66,7 @@
 	}
 	[super findDocumentWithId:documentId success:success failure:failure];
 }
+
 
 - (void)findDocumentsWithConditions:(NSDictionary *)searchConditions success:(void (^)(NSArray *))success failure:(void (^)(IJError *))failure {
 	if(![self checkAuthentication]) {
