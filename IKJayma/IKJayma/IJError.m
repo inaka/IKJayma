@@ -10,14 +10,30 @@
 
 @implementation IJError
 
--(id)initWithResponse:(NSHTTPURLResponse *)response responseObject:(id)responseObject andError:(NSError *)error
-{
-    if (self = [super init])
-    {
-        self.response = response;
-        self.responseObject = responseObject;
-        self.internalError = error;
-    }
+-(id)initWithResponse:(NSHTTPURLResponse *)response responseObject:(id)responseObject andError:(NSError *)error {
+	self = [[self class] errorWithDomain:error.domain ? error.domain : @"com.inaka.ikjayma.error" code:error.code userInfo:error.userInfo];
+	if(self) {
+		self.response = response;
+		self.responseObject = responseObject;
+		self.internalError = error;
+		self.responseCode = response.statusCode;
+	}
+	
     return self;
 }
+
+- (NSInteger)code {
+	return self.response.statusCode;
+}
+
+- (NSString *)debugDescription {
+	NSMutableString *returnString = [NSMutableString string];
+	[returnString appendFormat:@"Response: %@\n", self.response];
+	[returnString appendFormat:@"Response Object: %@\n", self.responseObject];
+	[returnString appendFormat:@"Internal Error: %@\n", self.internalError.localizedDescription];
+	[returnString appendFormat:@"code: %i", self.code];
+	
+	return returnString;
+}
+
 @end

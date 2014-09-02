@@ -10,11 +10,13 @@
 
 @interface IJError : NSError
 /*! The NSHTTPURLResponse from the server.*/
-@property (nonatomic,strong)NSHTTPURLResponse *response;
+@property (nonatomic,strong) NSHTTPURLResponse *response;
 /*! The response object created by AFNetworking.*/
-@property (nonatomic,strong)id responseObject;
+@property (nonatomic,strong) id responseObject;
 /*! The NSError retrieved by AFNetworking.*/
 @property (nonatomic,strong)NSError *internalError;
+/*! The Server Response Code */
+@property (nonatomic) NSInteger responseCode;
 /*! Assign the basic properties for an IJError */
 -(id)initWithResponse:(NSHTTPURLResponse *)response responseObject:(id)responseObject andError:(NSError *)error;
 @end

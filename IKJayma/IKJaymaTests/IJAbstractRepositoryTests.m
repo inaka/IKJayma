@@ -512,7 +512,7 @@
 -(void)test_refreshDocumentShouldCallSuccessWithSuccessAndFreshDocument
 {
     __block IJSampleDocument * documentFromServer = [[IJSampleDocument alloc]initWithDictionary:@{@"id":@"1"}];
-    __block BOOL successFromServer = nil;
+    __block BOOL successFromServer = NO;
     
     [sut refreshDocument:documentFromServer success:^(BOOL success) {
         successFromServer = success;
@@ -540,11 +540,34 @@
     expect(responseObjectFromServer).to.equal(operation.responseObject);
 }
 
--(NSError *)someError
-{
+- (void)test_error404ReturnsErrorStatusCode404 {
+	__block IJError * errorFromServer = nil;
+	
+    [sut createDocument:sampleDocument success:nil failure:^(IJError *error) {
+        errorFromServer = (IJError *)[self errorWithStatusCode:404];
+    }];
+    IJFakeHTTPRequestOperation * operation = [fakeBackend lastOperation];
+	
+    operation.failureBlock (operation, errorFromServer);
+    
+    expect(errorFromServer).to.beKindOf([IJError class]);
+	expect(errorFromServer.code).to.equal(404);
+}
+
+#pragma mark - Helpers
+
+-(NSError *)someError {
     NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc]initWithURL:[NSURL URLWithString:@"www.google.com.ar"] statusCode:arc4random()%400+100 HTTPVersion:@"1.1" headerFields:@{}];
     NSError *error = [NSError errorWithDomain:@"menosfruta" code:arc4random()%100 userInfo:@{}];
     id responseObject = @(arc4random()%10);
-    return [[IJError alloc]initWithResponse:response responseObject:responseObject andError:error];
+    return [[IJError alloc] initWithResponse:response responseObject:responseObject andError:error];
 }
+
+- (NSError *)errorWithStatusCode:(NSInteger)statusCode {
+	NSHTTPURLResponse *response = [[NSHTTPURLResponse alloc]initWithURL:[NSURL URLWithString:@"www.google.com.ar"] statusCode:statusCode HTTPVersion:@"1.1" headerFields:@{}];
+    NSError *error = [NSError errorWithDomain:@"menosfruta" code:arc4random()%100 userInfo:@{}];
+    id responseObject = @(arc4random()%10);
+    return [[IJError alloc] initWithResponse:response responseObject:responseObject andError:error];
+}
+
 @end
