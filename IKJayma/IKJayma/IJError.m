@@ -31,7 +31,7 @@
 	[returnString appendFormat:@"Response: %@\n", self.response];
 	[returnString appendFormat:@"Response Object: %@\n", self.responseObject];
 	[returnString appendFormat:@"Internal Error: %@\n", self.internalError.localizedDescription];
-	[returnString appendFormat:@"code: %i", self.code];
+	[returnString appendFormat:@"code: %li", (long)self.code];
 	
 	return returnString;
 }
