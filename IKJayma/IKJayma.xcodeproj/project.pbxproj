@@ -521,7 +521,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEFB0EE37ABA4CDBB4889D4C /* Pods-IKJayma.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DSTROOT = /tmp/IKJayma.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IKJayma/IKJayma-Prefix.pch";
@@ -535,7 +535,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BEFB0EE37ABA4CDBB4889D4C /* Pods-IKJayma.xcconfig */;
 			buildSettings = {
-				CURRENT_PROJECT_VERSION = 1.1;
+				CURRENT_PROJECT_VERSION = 1.1.1;
 				DSTROOT = /tmp/IKJayma.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "IKJayma/IKJayma-Prefix.pch";
