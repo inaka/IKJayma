@@ -1,600 +1,1525 @@
-// !$*UTF8*$!
-{
-	archiveVersion = 1;
-	classes = {
-	};
-	objectVersion = 46;
-	objects = {
-
-/* Begin PBXBuildFile section */
-		4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100027D1965982800331CA6 /* IKCreateContactViewController.m */; };
-		410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002851965D5F300331CA6 /* IKUpdateContactViewController.m */; };
-		4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002891965E8F300331CA6 /* IJAbstractDocument.m */; };
-		410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028B1965E8F300331CA6 /* IJAbstractRepository.m */; };
-		410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */; };
-		410002991966031900331CA6 /* IJError.m in Sources */ = {isa = PBXBuildFile; fileRef = 410002981966031900331CA6 /* IJError.m */; };
-		4100029C1966E19A00331CA6 /* IKSearchContactsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */; };
-		4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
-		4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814B196441E7004E05C7 /* CoreGraphics.framework */; };
-		4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
-		41088154196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088152196441E7004E05C7 /* InfoPlist.strings */; };
-		41088156196441E7004E05C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088155196441E7004E05C7 /* main.m */; };
-		4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 41088159196441E7004E05C7 /* IKAppDelegate.m */; };
-		4108815D196441E7004E05C7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4108815B196441E7004E05C7 /* Main.storyboard */; };
-		41088160196441E7004E05C7 /* IKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108815F196441E7004E05C7 /* IKViewController.m */; };
-		41088162196441E7004E05C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41088161196441E7004E05C7 /* Images.xcassets */; };
-		41088169196441E7004E05C7 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088168196441E7004E05C7 /* XCTest.framework */; };
-		4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41088149196441E7004E05C7 /* Foundation.framework */; };
-		4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4108814D196441E7004E05C7 /* UIKit.framework */; };
-		41088173196441E7004E05C7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41088171196441E7004E05C7 /* InfoPlist.strings */; };
-		4108818C196446AD004E05C7 /* IKContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818B196446AD004E05C7 /* IKContact.m */; };
-		4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 4108818E19644D83004E05C7 /* IKContactsRepository.m */; };
-		BFEE34AC19785A6C0025DB8E /* IJAbstractBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */; };
-		BFEE34AD19785A6C0025DB8E /* IJAbstractBackend.m in Sources */ = {isa = PBXBuildFile; fileRef = BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */; };
-		CC0E1346941945F29954D57E /* libPods-IKJaymaSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */; };
-/* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		4108816C196441E7004E05C7 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4108813E196441E7004E05C7 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 41088145196441E7004E05C7;
-			remoteInfo = IKJaymaSample;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXFileReference section */
-		1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IKJaymaSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4100027C1965982800331CA6 /* IKCreateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKCreateContactViewController.h; sourceTree = "<group>"; };
-		4100027D1965982800331CA6 /* IKCreateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCreateContactViewController.m; sourceTree = "<group>"; };
-		410002841965D5F300331CA6 /* IKUpdateContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKUpdateContactViewController.h; sourceTree = "<group>"; };
-		410002851965D5F300331CA6 /* IKUpdateContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKUpdateContactViewController.m; sourceTree = "<group>"; };
-		410002881965E8F300331CA6 /* IJAbstractDocument.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractDocument.h; sourceTree = "<group>"; };
-		410002891965E8F300331CA6 /* IJAbstractDocument.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractDocument.m; sourceTree = "<group>"; };
-		4100028A1965E8F300331CA6 /* IJAbstractRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractRepository.h; sourceTree = "<group>"; };
-		4100028B1965E8F300331CA6 /* IJAbstractRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractRepository.m; sourceTree = "<group>"; };
-		4100028C1965E8F300331CA6 /* IJAFNetworkingBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAFNetworkingBackend.h; sourceTree = "<group>"; };
-		4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAFNetworkingBackend.m; sourceTree = "<group>"; };
-		4100028E1965E8F300331CA6 /* IKJayma-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "IKJayma-Prefix.pch"; sourceTree = "<group>"; };
-		410002971966031900331CA6 /* IJError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJError.h; sourceTree = "<group>"; };
-		410002981966031900331CA6 /* IJError.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJError.m; sourceTree = "<group>"; };
-		4100029A1966E19A00331CA6 /* IKSearchContactsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKSearchContactsViewController.h; sourceTree = "<group>"; };
-		4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKSearchContactsViewController.m; sourceTree = "<group>"; };
-		41088146196441E7004E05C7 /* IKJaymaSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IKJaymaSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		41088149196441E7004E05C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		4108814B196441E7004E05C7 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		4108814D196441E7004E05C7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		41088151196441E7004E05C7 /* IKJaymaSample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaSample-Info.plist"; sourceTree = "<group>"; };
-		41088153196441E7004E05C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		41088155196441E7004E05C7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		41088157196441E7004E05C7 /* IKJaymaSample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "IKJaymaSample-Prefix.pch"; sourceTree = "<group>"; };
-		41088158196441E7004E05C7 /* IKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKAppDelegate.h; sourceTree = "<group>"; };
-		41088159196441E7004E05C7 /* IKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKAppDelegate.m; sourceTree = "<group>"; };
-		4108815C196441E7004E05C7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4108815E196441E7004E05C7 /* IKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IKViewController.h; sourceTree = "<group>"; };
-		4108815F196441E7004E05C7 /* IKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IKViewController.m; sourceTree = "<group>"; };
-		41088161196441E7004E05C7 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IKJaymaSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		41088168196441E7004E05C7 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		41088170196441E7004E05C7 /* IKJaymaSampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "IKJaymaSampleTests-Info.plist"; sourceTree = "<group>"; };
-		41088172196441E7004E05C7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		4108818A196446AD004E05C7 /* IKContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKContact.h; sourceTree = "<group>"; };
-		4108818B196446AD004E05C7 /* IKContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKContact.m; sourceTree = "<group>"; };
-		4108818D19644D83004E05C7 /* IKContactsRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKContactsRepository.h; sourceTree = "<group>"; };
-		4108818E19644D83004E05C7 /* IKContactsRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKContactsRepository.m; sourceTree = "<group>"; };
-		4108819019647410004E05C7 /* Headers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Headers.h; sourceTree = "<group>"; };
-		BFEE34AA19785A6C0025DB8E /* IJAbstractBackend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IJAbstractBackend.h; sourceTree = "<group>"; };
-		BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IJAbstractBackend.m; sourceTree = "<group>"; };
-		F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IKJaymaSample.xcconfig"; path = "Pods/Pods-IKJaymaSample.xcconfig"; sourceTree = "<group>"; };
-/* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		41088143196441E7004E05C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4108814C196441E7004E05C7 /* CoreGraphics.framework in Frameworks */,
-				4108814E196441E7004E05C7 /* UIKit.framework in Frameworks */,
-				4108814A196441E7004E05C7 /* Foundation.framework in Frameworks */,
-				CC0E1346941945F29954D57E /* libPods-IKJaymaSample.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41088164196441E7004E05C7 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41088169196441E7004E05C7 /* XCTest.framework in Frameworks */,
-				4108816B196441E7004E05C7 /* UIKit.framework in Frameworks */,
-				4108816A196441E7004E05C7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
-
-/* Begin PBXGroup section */
-		410002871965E8F300331CA6 /* IKJayma */ = {
-			isa = PBXGroup;
-			children = (
-				410002971966031900331CA6 /* IJError.h */,
-				410002981966031900331CA6 /* IJError.m */,
-				BFEE34AA19785A6C0025DB8E /* IJAbstractBackend.h */,
-				BFEE34AB19785A6C0025DB8E /* IJAbstractBackend.m */,
-				410002881965E8F300331CA6 /* IJAbstractDocument.h */,
-				410002891965E8F300331CA6 /* IJAbstractDocument.m */,
-				4100028A1965E8F300331CA6 /* IJAbstractRepository.h */,
-				4100028B1965E8F300331CA6 /* IJAbstractRepository.m */,
-				4100028C1965E8F300331CA6 /* IJAFNetworkingBackend.h */,
-				4100028D1965E8F300331CA6 /* IJAFNetworkingBackend.m */,
-				4100028E1965E8F300331CA6 /* IKJayma-Prefix.pch */,
-			);
-			name = IKJayma;
-			path = ../../IKJayma/IKJayma;
-			sourceTree = "<group>";
-		};
-		4108813D196441E7004E05C7 = {
-			isa = PBXGroup;
-			children = (
-				4108814F196441E7004E05C7 /* IKJaymaSample */,
-				4108816E196441E7004E05C7 /* IKJaymaSampleTests */,
-				41088148196441E7004E05C7 /* Frameworks */,
-				41088147196441E7004E05C7 /* Products */,
-				F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */,
-			);
-			sourceTree = "<group>";
-		};
-		41088147196441E7004E05C7 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				41088146196441E7004E05C7 /* IKJaymaSample.app */,
-				41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		41088148196441E7004E05C7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				41088149196441E7004E05C7 /* Foundation.framework */,
-				4108814B196441E7004E05C7 /* CoreGraphics.framework */,
-				4108814D196441E7004E05C7 /* UIKit.framework */,
-				41088168196441E7004E05C7 /* XCTest.framework */,
-				1394804781C54D008529B8C4 /* libPods-IKJaymaSample.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		4108814F196441E7004E05C7 /* IKJaymaSample */ = {
-			isa = PBXGroup;
-			children = (
-				410002871965E8F300331CA6 /* IKJayma */,
-				4108818919644462004E05C7 /* Abstract Sons */,
-				41088158196441E7004E05C7 /* IKAppDelegate.h */,
-				41088159196441E7004E05C7 /* IKAppDelegate.m */,
-				4108815B196441E7004E05C7 /* Main.storyboard */,
-				4108815E196441E7004E05C7 /* IKViewController.h */,
-				4108815F196441E7004E05C7 /* IKViewController.m */,
-				4100029A1966E19A00331CA6 /* IKSearchContactsViewController.h */,
-				4100029B1966E19A00331CA6 /* IKSearchContactsViewController.m */,
-				410002841965D5F300331CA6 /* IKUpdateContactViewController.h */,
-				410002851965D5F300331CA6 /* IKUpdateContactViewController.m */,
-				4100027C1965982800331CA6 /* IKCreateContactViewController.h */,
-				4100027D1965982800331CA6 /* IKCreateContactViewController.m */,
-				41088161196441E7004E05C7 /* Images.xcassets */,
-				41088150196441E7004E05C7 /* Supporting Files */,
-				4108819019647410004E05C7 /* Headers.h */,
-			);
-			path = IKJaymaSample;
-			sourceTree = "<group>";
-		};
-		41088150196441E7004E05C7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				41088151196441E7004E05C7 /* IKJaymaSample-Info.plist */,
-				41088152196441E7004E05C7 /* InfoPlist.strings */,
-				41088155196441E7004E05C7 /* main.m */,
-				41088157196441E7004E05C7 /* IKJaymaSample-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4108816E196441E7004E05C7 /* IKJaymaSampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				4108816F196441E7004E05C7 /* Supporting Files */,
-			);
-			path = IKJaymaSampleTests;
-			sourceTree = "<group>";
-		};
-		4108816F196441E7004E05C7 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				41088170196441E7004E05C7 /* IKJaymaSampleTests-Info.plist */,
-				41088171196441E7004E05C7 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		4108818919644462004E05C7 /* Abstract Sons */ = {
-			isa = PBXGroup;
-			children = (
-				4108818A196446AD004E05C7 /* IKContact.h */,
-				4108818B196446AD004E05C7 /* IKContact.m */,
-				4108818D19644D83004E05C7 /* IKContactsRepository.h */,
-				4108818E19644D83004E05C7 /* IKContactsRepository.m */,
-			);
-			name = "Abstract Sons";
-			sourceTree = "<group>";
-		};
-/* End PBXGroup section */
-
-/* Begin PBXNativeTarget section */
-		41088145196441E7004E05C7 /* IKJaymaSample */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 41088178196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSample" */;
-			buildPhases = (
-				FFB4865E08D24CEF93707E41 /* Check Pods Manifest.lock */,
-				41088142196441E7004E05C7 /* Sources */,
-				41088143196441E7004E05C7 /* Frameworks */,
-				41088144196441E7004E05C7 /* Resources */,
-				378FD1A13EC94984911B3389 /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = IKJaymaSample;
-			productName = IKJaymaSample;
-			productReference = 41088146196441E7004E05C7 /* IKJaymaSample.app */;
-			productType = "com.apple.product-type.application";
-		};
-		41088166196441E7004E05C7 /* IKJaymaSampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4108817B196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSampleTests" */;
-			buildPhases = (
-				41088163196441E7004E05C7 /* Sources */,
-				41088164196441E7004E05C7 /* Frameworks */,
-				41088165196441E7004E05C7 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4108816D196441E7004E05C7 /* PBXTargetDependency */,
-			);
-			name = IKJaymaSampleTests;
-			productName = IKJaymaSampleTests;
-			productReference = 41088167196441E7004E05C7 /* IKJaymaSampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-/* End PBXNativeTarget section */
-
-/* Begin PBXProject section */
-		4108813E196441E7004E05C7 /* Project object */ = {
-			isa = PBXProject;
-			attributes = {
-				CLASSPREFIX = IK;
-				LastUpgradeCheck = 0500;
-				ORGANIZATIONNAME = "Inaka Labs S.A.";
-				TargetAttributes = {
-					41088166196441E7004E05C7 = {
-						TestTargetID = 41088145196441E7004E05C7;
-					};
-				};
-			};
-			buildConfigurationList = 41088141196441E7004E05C7 /* Build configuration list for PBXProject "IKJaymaSample" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
-			hasScannedForEncodings = 0;
-			knownRegions = (
-				en,
-				Base,
-			);
-			mainGroup = 4108813D196441E7004E05C7;
-			productRefGroup = 41088147196441E7004E05C7 /* Products */;
-			projectDirPath = "";
-			projectRoot = "";
-			targets = (
-				41088145196441E7004E05C7 /* IKJaymaSample */,
-				41088166196441E7004E05C7 /* IKJaymaSampleTests */,
-			);
-		};
-/* End PBXProject section */
-
-/* Begin PBXResourcesBuildPhase section */
-		41088144196441E7004E05C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41088162196441E7004E05C7 /* Images.xcassets in Resources */,
-				41088154196441E7004E05C7 /* InfoPlist.strings in Resources */,
-				4108815D196441E7004E05C7 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41088165196441E7004E05C7 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				41088173196441E7004E05C7 /* InfoPlist.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		378FD1A13EC94984911B3389 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-IKJaymaSample-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FFB4865E08D24CEF93707E41 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		41088142196441E7004E05C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4108818C196446AD004E05C7 /* IKContact.m in Sources */,
-				410002861965D5F300331CA6 /* IKUpdateContactViewController.m in Sources */,
-				4100029C1966E19A00331CA6 /* IKSearchContactsViewController.m in Sources */,
-				4108815A196441E7004E05C7 /* IKAppDelegate.m in Sources */,
-				BFEE34AC19785A6C0025DB8E /* IJAbstractBackend.m in Sources */,
-				4108818F19644D83004E05C7 /* IKContactsRepository.m in Sources */,
-				410002911965E8F300331CA6 /* IJAFNetworkingBackend.m in Sources */,
-				4100027E1965982800331CA6 /* IKCreateContactViewController.m in Sources */,
-				4100028F1965E8F300331CA6 /* IJAbstractDocument.m in Sources */,
-				410002991966031900331CA6 /* IJError.m in Sources */,
-				410002901965E8F300331CA6 /* IJAbstractRepository.m in Sources */,
-				41088156196441E7004E05C7 /* main.m in Sources */,
-				41088160196441E7004E05C7 /* IKViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		41088163196441E7004E05C7 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BFEE34AD19785A6C0025DB8E /* IJAbstractBackend.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4108816D196441E7004E05C7 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 41088145196441E7004E05C7 /* IKJaymaSample */;
-			targetProxy = 4108816C196441E7004E05C7 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		41088152196441E7004E05C7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41088153196441E7004E05C7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		4108815B196441E7004E05C7 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4108815C196441E7004E05C7 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		41088171196441E7004E05C7 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				41088172196441E7004E05C7 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
-/* Begin XCBuildConfiguration section */
-		41088176196441E7004E05C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
-			};
-			name = Debug;
-		};
-		41088177196441E7004E05C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				SDKROOT = iphoneos;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		41088179196441E7004E05C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
-				INFOPLIST_FILE = "IKJaymaSample/IKJaymaSample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		4108817A196441E7004E05C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1AF91170AA141EB9CBB4A3C /* Pods-IKJaymaSample.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
-				INFOPLIST_FILE = "IKJaymaSample/IKJaymaSample-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
-		4108817C196441E7004E05C7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "IKJaymaSampleTests/IKJaymaSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Debug;
-		};
-		4108817D196441E7004E05C7 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "IKJaymaSample/IKJaymaSample-Prefix.pch";
-				INFOPLIST_FILE = "IKJaymaSampleTests/IKJaymaSampleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = xctest;
-			};
-			name = Release;
-		};
-/* End XCBuildConfiguration section */
-
-/* Begin XCConfigurationList section */
-		41088141196441E7004E05C7 /* Build configuration list for PBXProject "IKJaymaSample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				41088176196441E7004E05C7 /* Debug */,
-				41088177196441E7004E05C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		41088178196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSample" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				41088179196441E7004E05C7 /* Debug */,
-				4108817A196441E7004E05C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4108817B196441E7004E05C7 /* Build configuration list for PBXNativeTarget "IKJaymaSampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4108817C196441E7004E05C7 /* Debug */,
-				4108817D196441E7004E05C7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-/* End XCConfigurationList section */
-	};
-	rootObject = 4108813E196441E7004E05C7 /* Project object */;
-}
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>archiveVersion</key>
+	<string>1</string>
+	<key>classes</key>
+	<dict/>
+	<key>objectVersion</key>
+	<string>46</string>
+	<key>objects</key>
+	<dict>
+		<key>1394804781C54D008529B8C4</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-IKJaymaSample.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>378FD1A13EC94984911B3389</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-IKJaymaSample/Pods-IKJaymaSample-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>4100027C1965982800331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKCreateContactViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100027D1965982800331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKCreateContactViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100027E1965982800331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4100027D1965982800331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410002841965D5F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKUpdateContactViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002851965D5F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKUpdateContactViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002861965D5F300331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>410002851965D5F300331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410002871965E8F300331CA6</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>410002971966031900331CA6</string>
+				<string>410002981966031900331CA6</string>
+				<string>BFEE34AA19785A6C0025DB8E</string>
+				<string>BFEE34AB19785A6C0025DB8E</string>
+				<string>410002881965E8F300331CA6</string>
+				<string>410002891965E8F300331CA6</string>
+				<string>4100028A1965E8F300331CA6</string>
+				<string>4100028B1965E8F300331CA6</string>
+				<string>4100028C1965E8F300331CA6</string>
+				<string>4100028D1965E8F300331CA6</string>
+				<string>4100028E1965E8F300331CA6</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>IKJayma</string>
+			<key>path</key>
+			<string>../../IKJayma/IKJayma</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002881965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IJAbstractDocument.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002891965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IJAbstractDocument.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028A1965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IJAbstractRepository.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028B1965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IJAbstractRepository.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028C1965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IJAFNetworkingBackend.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028D1965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IJAFNetworkingBackend.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028E1965E8F300331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKJayma-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100028F1965E8F300331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>410002891965E8F300331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410002901965E8F300331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4100028B1965E8F300331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410002911965E8F300331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4100028D1965E8F300331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>410002971966031900331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IJError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002981966031900331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IJError.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>410002991966031900331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>410002981966031900331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4100029A1966E19A00331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKSearchContactsViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100029B1966E19A00331CA6</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKSearchContactsViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4100029C1966E19A00331CA6</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4100029B1966E19A00331CA6</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108813D196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4108814F196441E7004E05C7</string>
+				<string>4108816E196441E7004E05C7</string>
+				<string>41088148196441E7004E05C7</string>
+				<string>41088147196441E7004E05C7</string>
+				<string>57BF7EA28AAFA36F301B1602</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108813E196441E7004E05C7</key>
+		<dict>
+			<key>attributes</key>
+			<dict>
+				<key>CLASSPREFIX</key>
+				<string>IK</string>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+				<key>ORGANIZATIONNAME</key>
+				<string>Inaka Labs S.A.</string>
+				<key>TargetAttributes</key>
+				<dict>
+					<key>41088166196441E7004E05C7</key>
+					<dict>
+						<key>TestTargetID</key>
+						<string>41088145196441E7004E05C7</string>
+					</dict>
+				</dict>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>41088141196441E7004E05C7</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+				<string>Base</string>
+			</array>
+			<key>mainGroup</key>
+			<string>4108813D196441E7004E05C7</string>
+			<key>productRefGroup</key>
+			<string>41088147196441E7004E05C7</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>41088145196441E7004E05C7</string>
+				<string>41088166196441E7004E05C7</string>
+			</array>
+		</dict>
+		<key>41088141196441E7004E05C7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>41088176196441E7004E05C7</string>
+				<string>41088177196441E7004E05C7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>41088142196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4108818C196446AD004E05C7</string>
+				<string>410002861965D5F300331CA6</string>
+				<string>4100029C1966E19A00331CA6</string>
+				<string>4108815A196441E7004E05C7</string>
+				<string>BFEE34AC19785A6C0025DB8E</string>
+				<string>4108818F19644D83004E05C7</string>
+				<string>410002911965E8F300331CA6</string>
+				<string>4100027E1965982800331CA6</string>
+				<string>4100028F1965E8F300331CA6</string>
+				<string>410002991966031900331CA6</string>
+				<string>410002901965E8F300331CA6</string>
+				<string>41088156196441E7004E05C7</string>
+				<string>41088160196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088143196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>4108814C196441E7004E05C7</string>
+				<string>4108814E196441E7004E05C7</string>
+				<string>4108814A196441E7004E05C7</string>
+				<string>CC0E1346941945F29954D57E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088144196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>41088162196441E7004E05C7</string>
+				<string>41088154196441E7004E05C7</string>
+				<string>4108815D196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088145196441E7004E05C7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>41088178196441E7004E05C7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>FFB4865E08D24CEF93707E41</string>
+				<string>41088142196441E7004E05C7</string>
+				<string>41088143196441E7004E05C7</string>
+				<string>41088144196441E7004E05C7</string>
+				<string>378FD1A13EC94984911B3389</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>IKJaymaSample</string>
+			<key>productName</key>
+			<string>IKJaymaSample</string>
+			<key>productReference</key>
+			<string>41088146196441E7004E05C7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.application</string>
+		</dict>
+		<key>41088146196441E7004E05C7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.application</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>IKJaymaSample.app</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>41088147196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088146196441E7004E05C7</string>
+				<string>41088167196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088148196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088149196441E7004E05C7</string>
+				<string>4108814B196441E7004E05C7</string>
+				<string>4108814D196441E7004E05C7</string>
+				<string>41088168196441E7004E05C7</string>
+				<string>1394804781C54D008529B8C4</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088149196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4108814A196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088149196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108814B196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CoreGraphics.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/CoreGraphics.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4108814C196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108814B196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108814D196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>UIKit.framework</string>
+			<key>path</key>
+			<string>System/Library/Frameworks/UIKit.framework</string>
+			<key>sourceTree</key>
+			<string>SDKROOT</string>
+		</dict>
+		<key>4108814E196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108814D196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108814F196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>410002871965E8F300331CA6</string>
+				<string>4108818919644462004E05C7</string>
+				<string>41088158196441E7004E05C7</string>
+				<string>41088159196441E7004E05C7</string>
+				<string>4108815B196441E7004E05C7</string>
+				<string>4108815E196441E7004E05C7</string>
+				<string>4108815F196441E7004E05C7</string>
+				<string>4100029A1966E19A00331CA6</string>
+				<string>4100029B1966E19A00331CA6</string>
+				<string>410002841965D5F300331CA6</string>
+				<string>410002851965D5F300331CA6</string>
+				<string>4100027C1965982800331CA6</string>
+				<string>4100027D1965982800331CA6</string>
+				<string>41088161196441E7004E05C7</string>
+				<string>41088150196441E7004E05C7</string>
+				<string>4108819019647410004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>IKJaymaSample</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088150196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088151196441E7004E05C7</string>
+				<string>41088152196441E7004E05C7</string>
+				<string>41088155196441E7004E05C7</string>
+				<string>41088157196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088151196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>IKJaymaSample-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088152196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088153196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088153196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088154196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088152196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>41088155196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>main.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088156196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088155196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>41088157196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKJaymaSample-Prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088158196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKAppDelegate.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088159196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKAppDelegate.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108815A196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088159196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108815B196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4108815C196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108815C196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>file.storyboard</string>
+			<key>name</key>
+			<string>Base</string>
+			<key>path</key>
+			<string>Base.lproj/Main.storyboard</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108815D196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108815B196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108815E196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKViewController.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108815F196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKViewController.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088160196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108815F196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>41088161196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>folder.assetcatalog</string>
+			<key>path</key>
+			<string>Images.xcassets</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088162196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088161196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>41088163196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>BFEE34AD19785A6C0025DB8E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088164196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>41088169196441E7004E05C7</string>
+				<string>4108816B196441E7004E05C7</string>
+				<string>4108816A196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088165196441E7004E05C7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>41088173196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXResourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>41088166196441E7004E05C7</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>4108817B196441E7004E05C7</string>
+			<key>buildPhases</key>
+			<array>
+				<string>41088163196441E7004E05C7</string>
+				<string>41088164196441E7004E05C7</string>
+				<string>41088165196441E7004E05C7</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>4108816D196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>IKJaymaSampleTests</string>
+			<key>productName</key>
+			<string>IKJaymaSampleTests</string>
+			<key>productReference</key>
+			<string>41088167196441E7004E05C7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.bundle.unit-test</string>
+		</dict>
+		<key>41088167196441E7004E05C7</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.cfbundle</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>IKJaymaSampleTests.xctest</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>41088168196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>XCTest.framework</string>
+			<key>path</key>
+			<string>Library/Frameworks/XCTest.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>41088169196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088168196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108816A196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088149196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108816B196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108814D196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108816C196441E7004E05C7</key>
+		<dict>
+			<key>containerPortal</key>
+			<string>4108813E196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXContainerItemProxy</string>
+			<key>proxyType</key>
+			<string>1</string>
+			<key>remoteGlobalIDString</key>
+			<string>41088145196441E7004E05C7</string>
+			<key>remoteInfo</key>
+			<string>IKJaymaSample</string>
+		</dict>
+		<key>4108816D196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>41088145196441E7004E05C7</string>
+			<key>targetProxy</key>
+			<string>4108816C196441E7004E05C7</string>
+		</dict>
+		<key>4108816E196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4108816F196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>path</key>
+			<string>IKJaymaSampleTests</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108816F196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088170196441E7004E05C7</string>
+				<string>41088171196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Supporting Files</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088170196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>IKJaymaSampleTests-Info.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088171196441E7004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>41088172196441E7004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXVariantGroup</string>
+			<key>name</key>
+			<string>InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088172196441E7004E05C7</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.strings</string>
+			<key>name</key>
+			<string>en</string>
+			<key>path</key>
+			<string>en.lproj/InfoPlist.strings</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>41088173196441E7004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>41088171196441E7004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>41088176196441E7004E05C7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>ONLY_ACTIVE_ARCH</key>
+				<string>YES</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>41088177196441E7004E05C7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
+				<string>gnu++0x</string>
+				<key>CLANG_CXX_LIBRARY</key>
+				<string>libc++</string>
+				<key>CLANG_ENABLE_MODULES</key>
+				<string>YES</string>
+				<key>CLANG_ENABLE_OBJC_ARC</key>
+				<string>YES</string>
+				<key>CLANG_WARN_BOOL_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_CONSTANT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_DIRECT_OBJC_ISA_USAGE</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN_EMPTY_BODY</key>
+				<string>YES</string>
+				<key>CLANG_WARN_ENUM_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_INT_CONVERSION</key>
+				<string>YES</string>
+				<key>CLANG_WARN_OBJC_ROOT_CLASS</key>
+				<string>YES_ERROR</string>
+				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
+				<string>YES</string>
+				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
+				<string>iPhone Developer</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>ENABLE_NS_ASSERTIONS</key>
+				<string>NO</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_WARN_64_TO_32_BIT_CONVERSION</key>
+				<string>YES</string>
+				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
+				<string>YES_ERROR</string>
+				<key>GCC_WARN_UNDECLARED_SELECTOR</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_FUNCTION</key>
+				<string>YES</string>
+				<key>GCC_WARN_UNUSED_VARIABLE</key>
+				<string>YES</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>7.0</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>41088178196441E7004E05C7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>41088179196441E7004E05C7</string>
+				<string>4108817A196441E7004E05C7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>41088179196441E7004E05C7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>DBDAAEC2CCCC920E0AACA9AB</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>IKJaymaSample/IKJaymaSample-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>IKJaymaSample/IKJaymaSample-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4108817A196441E7004E05C7</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>86EF14F082791E0ACE96737E</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ASSETCATALOG_COMPILER_APPICON_NAME</key>
+				<string>AppIcon</string>
+				<key>ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME</key>
+				<string>LaunchImage</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>IKJaymaSample/IKJaymaSample-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>IKJaymaSample/IKJaymaSample-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>app</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4108817B196441E7004E05C7</key>
+		<dict>
+			<key>buildConfigurations</key>
+			<array>
+				<string>4108817C196441E7004E05C7</string>
+				<string>4108817D196441E7004E05C7</string>
+			</array>
+			<key>defaultConfigurationIsVisible</key>
+			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
+		</dict>
+		<key>4108817C196441E7004E05C7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>IKJaymaSample/IKJaymaSample-Prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>INFOPLIST_FILE</key>
+				<string>IKJaymaSampleTests/IKJaymaSampleTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>4108817D196441E7004E05C7</key>
+		<dict>
+			<key>buildSettings</key>
+			<dict>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>BUNDLE_LOADER</key>
+				<string>$(BUILT_PRODUCTS_DIR)/IKJaymaSample.app/IKJaymaSample</string>
+				<key>FRAMEWORK_SEARCH_PATHS</key>
+				<array>
+					<string>$(SDKROOT)/Developer/Library/Frameworks</string>
+					<string>$(inherited)</string>
+					<string>$(DEVELOPER_FRAMEWORKS_DIR)</string>
+				</array>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>IKJaymaSample/IKJaymaSample-Prefix.pch</string>
+				<key>INFOPLIST_FILE</key>
+				<string>IKJaymaSampleTests/IKJaymaSampleTests-Info.plist</string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>TEST_HOST</key>
+				<string>$(BUNDLE_LOADER)</string>
+				<key>WRAPPER_EXTENSION</key>
+				<string>xctest</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Release</string>
+		</dict>
+		<key>4108818919644462004E05C7</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4108818A196446AD004E05C7</string>
+				<string>4108818B196446AD004E05C7</string>
+				<string>4108818D19644D83004E05C7</string>
+				<string>4108818E19644D83004E05C7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Abstract Sons</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108818A196446AD004E05C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKContact.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108818B196446AD004E05C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKContact.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108818C196446AD004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108818B196446AD004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108818D19644D83004E05C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IKContactsRepository.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108818E19644D83004E05C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IKContactsRepository.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>4108818F19644D83004E05C7</key>
+		<dict>
+			<key>fileRef</key>
+			<string>4108818E19644D83004E05C7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4108819019647410004E05C7</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Headers.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>57BF7EA28AAFA36F301B1602</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>DBDAAEC2CCCC920E0AACA9AB</string>
+				<string>86EF14F082791E0ACE96737E</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>86EF14F082791E0ACE96737E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-IKJaymaSample.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-IKJaymaSample/Pods-IKJaymaSample.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BFEE34AA19785A6C0025DB8E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>IJAbstractBackend.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BFEE34AB19785A6C0025DB8E</key>
+		<dict>
+			<key>fileEncoding</key>
+			<string>4</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>IJAbstractBackend.m</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>BFEE34AC19785A6C0025DB8E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BFEE34AB19785A6C0025DB8E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>BFEE34AD19785A6C0025DB8E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>BFEE34AB19785A6C0025DB8E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>CC0E1346941945F29954D57E</key>
+		<dict>
+			<key>fileRef</key>
+			<string>1394804781C54D008529B8C4</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DBDAAEC2CCCC920E0AACA9AB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-IKJaymaSample.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-IKJaymaSample/Pods-IKJaymaSample.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FFB4865E08D24CEF93707E41</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+	</dict>
+	<key>rootObject</key>
+	<string>4108813E196441E7004E05C7</string>
+</dict>
+</plist>
