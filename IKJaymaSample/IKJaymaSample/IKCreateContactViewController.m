@@ -50,7 +50,7 @@
 //                [[[UIAlertView alloc]initWithTitle:@"ERROR" message:errorMessage delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil]show];
 //    } ];
 	
-	[self.contactsRepository createDocument:contact success:^(IJAbstractDocument *document) {
+	[self.contactsRepository createDocument:contact success:^(id<IJDocumentProtocol>document) {
 		[self.navigationController popViewControllerAnimated:YES];
 	} failure:^(IJError *error) {
 		[[[UIAlertView alloc]initWithTitle:@"ERROR"

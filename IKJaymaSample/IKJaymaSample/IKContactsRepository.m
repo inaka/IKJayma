@@ -25,7 +25,7 @@
 }
 -(void)createContact:(IKContact *)contact success:(void (^)(IKContact * contact))success failure:(void (^)(NSString * errorMessage))failure
 {
-    [self createDocument:contact success:^(IJAbstractDocument *document) {
+    [self createDocument:contact success:^(id<IJDocumentProtocol>document) {
         if (success)
         {
             success ((IKContact *)document);
@@ -40,7 +40,7 @@
 
 -(void)updateContact:(IKContact *)contact success:(void (^)(IKContact * contact))success failure:(void (^)(NSString * messageError))failure
 {
-    [self updateDocument:contact success:^(IJAbstractDocument *document) {
+    [self updateDocument:contact success:^(id<IJDocumentProtocol>document) {
         if (success)
         {
             success ((IKContact *)document);
