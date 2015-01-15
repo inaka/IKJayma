@@ -90,13 +90,8 @@
     [self.backend queueRequest:request success:^(NSOperation *operation, id responseObject) {
         if (success)
         {
-            NSMutableArray * documentsArray = [NSMutableArray array];
-            for (id documentDictionary in responseObject)
-            {
-                
-               [documentsArray addObject:[self writeDocumentWithResponseObject:documentDictionary]];
-            }
-            success (documentsArray);
+            success([self writeDocumentsWithResponseObject:responseObject]);
+
         }
     } failure:failure];
 }
@@ -133,6 +128,17 @@
 {
     NSAssert(NO, @"This is an abstract method and should be overridden");
     return nil;
+}
+
+-(NSArray *)writeDocumentsWithResponseObject:(id)responseObject
+{
+    NSMutableArray * documentsArray = [NSMutableArray array];
+    for (id documentDictionary in responseObject)
+    {
+        [documentsArray addObject:[self writeDocumentWithResponseObject:documentDictionary]];
+    }
+    
+    return documentsArray;
 }
 
 - (NSMutableURLRequest *)requestWithUrl:(NSURL *)url httpMethod:(NSString *)method {
