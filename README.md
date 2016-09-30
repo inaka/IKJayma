@@ -3,6 +3,8 @@ IKJayma
 
 RESTful API abstraction for Server Interconnection
 
+> ⚠️ **This is the Objective-C version and it's no longer maintained.** For a Swift equivalent (and enhanced) version, check out [Jayme](http://inaka.net/blog/2016/05/09/meet-jayme/) and [its birth's blogpost](http://inaka.net/blog/2016/05/09/meet-jayme/).
+
 Contact Us
 =======
 For **questions** or **general comments** regarding the use of this library, please use our public
